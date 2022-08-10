@@ -6,6 +6,7 @@
   color: #fff;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 /********** ROOT *************/
@@ -13,7 +14,8 @@
 :root{
   --background-principal: #151515;
   --background-secondary: #272727;
-  --important-color: #cbae87;
+  --important-color: #FE642E;
+  --background-white: #f4f4f4;
 }
 
 /********** SCROLL BAR *************/
@@ -34,6 +36,28 @@
     background-color:  var(--important-color);
 }
 
+
+.custom-shape-divider-bottom-1659917071 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1659917071 svg {
+    position: relative;
+    display: block;
+    width: calc(122% + 1.3px);
+    height: 94px;
+}
+
+.custom-shape-divider-bottom-1659917071 .shape-fill {
+    fill: #151515;
+}
+
 /******** BODY *********/
 
 body{
@@ -41,7 +65,6 @@ body{
   width: 100%;
   height: 100vh;
   background-color: #151515;
-  scroll-behavior: smooth;
 }
 
 /******** PANNELS *********/
@@ -53,6 +76,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .pannels h1{
@@ -66,14 +90,32 @@ body{
 .menu{
 
   width: 100%;
-  height: 80px;
+  height: 100px;
+  background: #f4f4f400;
+  z-index: 9;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
   top: 0px;
   left: 0px;
-  background-color: var(--background-secondary);
+  transition: .5s all;
+}
+
+.menuresponse{
+
+  display: flex;
+  gap: 20px;
+  margin-right: 100px;
+}
+
+.menu ul a{
+  font-size: .9rem;
+}
+
+.btn-menu{
+
+  display:none;
 }
 
 .menu h1{
@@ -83,29 +125,116 @@ body{
   margin-left: 100px;
 }
 
-.menu ul{
-  display: flex;
+#menuEvent{
+
+  display: none;
   align-items: center;
   gap: 20px;
   margin-right: 100px;
 }
 
+#abrirBtn, #fecharBtn{
+
+  display: none;
+}
+
+.menu button{
+    
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--background-secondary);
+  margin-right: 15px;
+}
+
+.menu button i{
+
+  color: var(--important-color);
+  font-size: 2.5rem;
+}
 .menu ul a{
 
   text-transform: uppercase;
+  font-weight: 600;
 }
 
+.menu-scroll{
 
-@media all and (max-width: 750px) {
+  height: 70px;
+  background-color: var(--background-secondary);
+  transition: .5s all;
+}
 
-  .menu h1{
+.menu-scroll h1{
 
-    display: none;
+  font-size: 1rem;
+  transition: .5s all;
+}
+
+.menu-scroll ul a{
+
+  font-size: .8rem;
+  font-weight: 400;
+  transition: .5s all;
+}
+
+/* Estilo para resolução menor que 750 pixels */
+@media all and (max-width: 768px) {
+
+  .menu{
+
+    background-color: var(--background-white);
+    width: 100%;
+    height: 90px;
   }
 
-  .menu ul a{
+  .menu h1{
+    margin-left: 40px;
+    color: var(--background-principal);
+  }
 
-    font-size: .5rem;
+  .btn-menu{
+
+    display: flex;
+  }
+
+  #menuEvent {
+
+    display: none;
+    width: 100%;
+    height: calc(100vh - 100px);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    background-color: #15151590;
+    backdrop-filter: blur(10px);
+  }
+
+  #menuEvent a{
+    width: 70%;
+    height: 12%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--important-color);
+    font-size: 1.3rem;
+  }
+
+  #abrirBtn{
+
+    display: flex;
+  }
+
+  .menuresponse{
+
+    display: none;
+    background-color: red;
   }
 
 }
@@ -129,7 +258,7 @@ body{
 
 #home{
 
-  background-image: url(https://data.1freewallpapers.com/download/desert-sunset-sand-hills-bushes-1280x800.jpg);
+  background-image: url(https://images.unsplash.com/photo-1604580864964-0462f5d5b1a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aGlzdG9yeXxlbnwwfHwwfHw%3D&w=1000&q=80);
   background-size: cover;
 }
 
@@ -138,10 +267,10 @@ body{
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  background-color: #15151595;
+  background-color: #15151599;
 }
 
 .banner h5{
@@ -150,16 +279,199 @@ body{
   color: var(--important-color);
 }
 
-.banner h1{
+.banner h1, .banner p,
+.banner h5, .banner button{
 
-  text-transform: uppercase;
+  margin-left: 100px;
 }
 
 .banner p{
 
-  width: 57%;
-  text-align: center;
+  width: 43%;
   margin-top: 10px;
+  font-size: 1.3rem;
+  color: #f4f4f490;
+  font-weight: 700;
+}
+
+.number-page-01,
+.number-page-02,
+.number-page-03{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 10px;
+  width: 170px;
+  height: 170px;
+  background-color: #15151590;
+}
+
+.number-page-01 h1,
+.number-page-02 h1,
+.number-page-03 h1{
+  font-weight: 900;
+
+}
+
+.number-page-01{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+.number-page-02{
+
+  position: relative;
+  right: 0px;
+  top: 250px;
+}
+
+/******** Sobre o Projeto *********/
+
+#about-project div{
+
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.img-about-project{
+
+  background-image: url(..//img/coliseu.png);
+  background-size: cover;
+  background-position: 100%;
+}
+
+.text-about-project{
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+.text-about-project hr{
+
+  margin: 20px 0px;
+  border: none;
+  height: 2px;
+  width: 40%;
+  background-color: var(--important-color);
+}
+
+.text-about-project p{
+
+  width: 80%;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+  color: #f4f4f490;
+}
+
+.text-about-project hr,
+.text-about-project h1,
+.text-about-project p{
+  
+  margin-left: 40px;
+}
+
+/******** MOVIES *********/
+
+#video div{
+
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.video video{
+
+  width: 90%;
+  height: 50%;
+}
+
+.video h3{
+
   font-size: 1.5rem;
+  margin: 20px 0px;
+}
+
+
+/******** ABOUT - US *********/
+
+#aboutus{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title-about-us h1{
+
+  font-size: 2rem;
+  margin: 30px 0px;
+}
+
+.panel-about-us{
+
+  height: 70%;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.panel-about-us div{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--background-secondary);
+  border-radius: 10px;
+  width: 30%;
+  height: 100%;
+}
+
+.text-about-us figure{
+  
+  width: 180px;
+  height:180px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(..//img/lara-croft.jpg);
+  background-size: cover;
+}
+
+.text-about-us figcaption{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.text-about-us figcaption h1{
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.text-about-us figcaption p{
+
+  width: 80%;
+  margin-top: 20px;
+  font-size: 1rem;
   color: #f4f4f490;
 }
