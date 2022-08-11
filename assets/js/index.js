@@ -41,3 +41,18 @@ function linkFechar(){
   abrirMenu.style.display = "flex"
   fecharMenu.style.display = "none"
 }
+
+function openTopics(){
+  
+  var openTopics = document.getElementById('topics')
+  openTopics.style.display = "flex"
+}
+
+function exitTopics(){
+
+  var openTopics = document.getElementById('topics')
+  
+  if (!openTopics.contains(e.target)) {
+    openTopics.style.display = 'none';
+  }
+}
