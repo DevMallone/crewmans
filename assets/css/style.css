@@ -5,6 +5,7 @@
   padding: 0px;
   color: #fff;
   text-decoration: none;
+  list-style: none;
   font-family: Arial, Helvetica, sans-serif;
   scroll-behavior: smooth;
 }
@@ -14,7 +15,7 @@
 :root{
   --background-principal: #151515;
   --background-secondary: #272727;
-  --important-color: #FE642E;
+  --important-color:  #03edae;
   --background-white: #f4f4f4;
 }
 
@@ -55,7 +56,7 @@
 }
 
 .custom-shape-divider-bottom-1659917071 .shape-fill {
-    fill: #151515;
+    fill: var(--background-principal);
 }
 
 /******** BODY *********/
@@ -92,7 +93,7 @@ body{
   width: 100%;
   height: 100px;
   background: #f4f4f400;
-  z-index: 9;
+  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -118,11 +119,79 @@ body{
   display:none;
 }
 
+.topics{
+
+  width: 250px;
+  height: 200px;
+  position: absolute;
+  top: 70px;
+  z-index: -1;
+  border-top: 1px solid #fff;
+  background-color: var(--background-secondary);
+  box-shadow: -5px 5px 5px 0px #15151590;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.activeLink{
+
+  background: red;
+}
+
+.topics a{
+  width: 100%;
+  height: 19%;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.topics a p{
+  margin-left: 20px;
+}
+
 .menu h1{
 
-  font-size: 1.5rem;
+  width: 100px;
+  height: 70px;
+  font-size: 2rem;
   text-transform: uppercase;
   margin-left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+  font-weight: 900;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #15151590;
+}
+
+.menu-scroll h1{
+  height: 60px;
+  background-color: var(--background-principal);
+  box-shadow: 0px 0px 10px 0px #15151590;
+}
+
+.menu h1 b{
+
+  font-size: 1.3rem;
+  margin: 0px 5px;
+  color: var(--important-color);
+}
+
+.menu h1:hover{
+  color: var(--important-color);
+  cursor: pointer;
+}
+
+.menu h1:hover b{
+
+  cursor: pointer;
+  color: var(--background-white);
 }
 
 #menuEvent{
@@ -142,12 +211,25 @@ body{
     
   width: 70px;
   height: 70px;
+  cursor: pointer;
   border-radius: 10px;
   align-items: center;
   justify-content: center;
   border: none;
   background-color: var(--background-secondary);
   margin-right: 15px;
+  box-shadow: 0px 0px 10px 0px #15151599;
+  transition: .5s;
+}
+
+.menu button:hover i{
+
+  color: var(--background-principal);
+}
+
+.menu button:hover{
+  background-color: var(--important-color);
+  box-shadow: 0px 0px 10px 0px #04d19a90;
 }
 
 .menu button i{
@@ -161,24 +243,25 @@ body{
   font-weight: 600;
 }
 
+.menu ul a:hover{
+  cursor: pointer;
+  color: var(--important-color);
+  transition: .5s;
+}
+
 .menu-scroll{
 
   height: 70px;
-  background-color: var(--background-secondary);
-  transition: .5s all;
-}
-
-.menu-scroll h1{
-
-  font-size: 1rem;
+  background-color: var(--background-white);
   transition: .5s all;
 }
 
 .menu-scroll ul a{
 
   font-size: .8rem;
-  font-weight: 400;
+  
   transition: .5s all;
+  color: var(--background-principal);
 }
 
 /* Estilo para resolução menor que 750 pixels */
@@ -192,8 +275,9 @@ body{
   }
 
   .menu h1{
-    margin-left: 40px;
-    color: var(--background-principal);
+    height: 60px;
+    background-color: var(--background-principal);
+    margin-left: 20px;
   }
 
   .btn-menu{
@@ -205,25 +289,35 @@ body{
 
     display: none;
     width: 100%;
-    height: calc(100vh - 100px);
+    height: 100vh;
+    transition: .5s;
+    height: calc(100vh - 80px);
     align-items: center;
     justify-content: center;
     flex-direction: column;
     position: absolute;
     top: 90px;
-    background-color: #15151590;
-    backdrop-filter: blur(10px);
+    background-color: var(--background-principal);
   }
 
   #menuEvent a{
     width: 70%;
     height: 12%;
+    transition: .5s;
     border-radius: 5px;
     display: flex;
+    text-transform: uppercase;
     align-items: center;
     justify-content: center;
     background-color: var(--important-color);
     font-size: 1.3rem;
+    color: var(--background-principal);
+    font-weight: 700;
+  }
+
+  #menuEvent a:hover{
+
+    box-shadow: 0px 0px 10px 0px #04d19a;
   }
 
   #abrirBtn{
@@ -243,22 +337,47 @@ body{
 /******** BTN - ALL *********/
 
 .btn-all{
-  width: 170px;
-  height: 60px;
-  border-radius: 5px;
-  border: 1px solid #fff;
+  width: 175px;
+  height: 55px;
   font-size: 1rem;
   text-transform: uppercase;
-  font-weight: 700;
-  margin-top: 40px;
+  font-weight: 600;
+  border: solid 2px var(--important-color);
   background: none;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  gap: 10px;
+  transition: .5s;
+}
+
+.btn-all:hover{
+
+  color: var(--background-principal);
+  border: 2px solid #04d19a;
+  box-shadow: inset 120px 0px 0px 0px #03edae;
+  gap: 30px;
+}
+
+.btn-all:hover i{
+  color: var(--important-color);
+  margin-right: 5px;
+}
+
+.btn-all i{
+  font-size: 1rem;
+  color: #fff;
 }
 
 /******** BANNER *********/
 
 #home{
 
-  background-image: url(https://images.unsplash.com/photo-1604580864964-0462f5d5b1a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aGlzdG9yeXxlbnwwfHwwfHw%3D&w=1000&q=80);
+  background-image: url(..//img/background.jpg);
   background-size: cover;
 }
 
@@ -271,6 +390,11 @@ body{
   justify-content: center;
   flex-direction: column;
   background-color: #15151599;
+}
+
+.banner button{
+
+  margin-top: 20px;
 }
 
 .banner h5{
@@ -287,7 +411,7 @@ body{
 
 .banner p{
 
-  width: 43%;
+  width: 35%;
   margin-top: 10px;
   font-size: 1.3rem;
   color: #f4f4f490;
@@ -302,14 +426,15 @@ body{
   align-items: center;
   justify-content: center;
   border-top-left-radius: 10px;
-  width: 170px;
-  height: 170px;
-  background-color: #15151590;
+  width: 130px;
+  height: 130px;
+  
 }
 
 .number-page-01 h1,
 .number-page-02 h1,
 .number-page-03 h1{
+  font-size: 3rem;
   font-weight: 900;
 
 }
@@ -474,4 +599,39 @@ body{
   margin-top: 20px;
   font-size: 1rem;
   color: #f4f4f490;
+}
+
+/******* RESPONSIVIDADE ********/
+
+@media all and (max-width: 768px) {
+
+  #home{
+
+    background-image: url(..//img/background_min.jpg);
+    background-size: cover;
+  }
+
+  .banner{
+
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .banner h1{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+  }
+
+  .banner p{
+
+    width: 80%;
+    text-align: center;
+  }
+
+  .banner h1, .banner p,
+  .banner h5, .banner button{
+
+    margin-left: 0px;
+  }
 }
