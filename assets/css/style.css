@@ -39,25 +39,25 @@
 }
 
 
-.custom-shape-divider-bottom-1659917071 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
+.custom-shape-divider-bottom-1660354727 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1659917071 svg {
-    position: relative;
-    display: block;
-    width: calc(122% + 1.3px);
-    height: 94px;
+.custom-shape-divider-bottom-1660354727 svg {
+  position: relative;
+  display: block;
+  width: calc(114% + 1.3px);
+  height: 93px;
 }
 
-.custom-shape-divider-bottom-1659917071 .shape-fill {
-    fill: var(--background-principal);
+.custom-shape-divider-bottom-1660354727 .shape-fill {
+  fill: var(--background-secondary);
 }
 
 /******** BODY *********/
@@ -67,6 +67,7 @@ body{
   width: 100%;
   height: 100vh;
   background-color: #151515;
+  color: red;
 }
 
 /******** PANNELS *********/
@@ -391,7 +392,7 @@ body{
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  background-color: #15151599;
+  background-color: #00000099;
 }
 
 .banner button{
@@ -463,6 +464,7 @@ body{
     align-items: center;
     justify-content:center;
     flex-direction: column;
+    background-color: var(--background-secondary);
 }
 
 .all-titles{
@@ -493,26 +495,69 @@ body{
 .content-categs{
     
     width: 89%;
-    height: 50%;
+    height: 55%;
     margin-top: 70px;
     display: flex;
     justify-content: space-between;
     
 }
 
+#topics .all-titles{
+
+  margin-top: 40px;
+}
+
 .content-categs a{
 
-    width: 22%;
+    width: 23%;
     height: 100%;
-    box-shadow: 0px 0px 10px 0px #000;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px #00000090;
+    transition: .3s;
+}
+
+.content-categs a:hover{
+
+  transform: scale(1.1);
+}
+
+.content-categs a:hover figcaption{
+
+  transition: .3s;
+  background-color: var(--background-white);
+}
+
+.content-categs a:hover figcaption h1{
+
+  transition: .3s;
+  color: var(--background-principal);
+}
+
+.content-categs a:hover figcaption h6{
+
+  transition: .3s;
+  color: var(--background-secondary);
+  opacity: .6;
+}
+
+.content-categs a:hover figcaption p{
+
+  transition: .3s;
+  color: var(--background-principal);
+}
+
+.content-categs a:hover figcaption p i{
+
+  transition: .3s;
+  color: var(--background-principal);
 }
 
 .content-categs figure{
 
     width: 100%;
     height: 50%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     display: flex;
     justify-content:center;
     align-items: center;
@@ -522,8 +567,8 @@ body{
 
     width: 100%;
     height: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius:5px;
+    border-top-right-radius: 5px;
     background-size: cover;
 }
 
@@ -531,14 +576,14 @@ body{
 
     width: 100%;
     height: 50%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: var(--background-secondary);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: var(--background-principal);
     display: flex;
     justify-content:center;
     align-items: flex-start;
     flex-direction: column;
-    gap: 25px;
+    gap: 10px;
 }
 
 .content-categs figcaption h1,
@@ -550,7 +595,7 @@ body{
 
 .content-categs figcaption h1{
 
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: var(--important-color);
     text-transform: uppercase;
 }
@@ -558,7 +603,7 @@ body{
 .content-categs figcaption h6{
 
     width: 80%;
-    font-size: 1rem;
+    font-size: .9rem;
     color: #f4f4f490;
 }
 
@@ -569,8 +614,8 @@ body{
     justify-content:center;
     text-transform: uppercase;
     position: relative;
-    bottom: -30px;
-    font-size: .8rem;
+    bottom: -10px;
+    font-size: .7rem;
     font-weight: 800;
 }
 
@@ -589,128 +634,79 @@ body{
 
 /***** PRODUCTS *****/
 
+#warParaguai, #vida-maria{
 
-.box-products {
-
-  width: 85%;
-  margin-top: 40px;
-  background-color: red;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.box-products:hover .buttons-arrows {
-  display: flex;
-  transition: .5s;
-}
-
-.carrossel {
-
-  width: 100%;
-  height: 100%;
-  display: flex;
-
-}
-
-.carrossel li {
-
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  position: relative;
-  cursor: pointer;
-  transition: 0.5s;
-
-}
-
-.carrossel figure {
-
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--secundary-background);
-}
-
-.carrossel figure img {
-
-  width: 100%;
-  cursor: pointer;
-}
-
-.carrossel figure:hover {
-  cursor: pointer;
-}
-
-.carrossel figcaption {
-
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  background-color: var(--background-secondary);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   flex-direction: column;
+  background-color: var(--background-secondary);
+  box-shadow: 0px 0px 10px 0px #000;
 }
 
-.carrossel figcaption h1{
+#warParaguai .all-titles,
+#vida-maria .all-titles{
 
-  font-size: 2rem;
-  text-transform: uppercase;
-  color: var(--important-color);
-  margin-top: 30px;
+  margin-top: 60px;
 }
 
-.carrossel figcaption p{
+.box-war-paraguai{
 
-  width: 80%;
-  font-size: 1rem;
-  letter-spacing: 3px;
-  line-height: 30px;
-  color: #f4f4f499;
-}
-
-.carrossel figcaption h4{
-  text-transform: uppercase;
-}
-
-.fas:hover {
-  color: var(--important-color);
-  cursor: pointer;
-}
-
-.far:hover {
-  color: red;
-  cursor: pointer;
-}
-
-.progress-carr{
-
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 100px;
-  height: 40px;
-  z-index: 8;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--background-principal);
-  border-bottom-left-radius: 10px;
+  width: 84%;
+  height: 60%;
+  margin-top: 40px;
+  box-shadow: 0px 0px 10px 0px #000;
 }
 
-.progress-carr h1{
+.box-war-paraguai figure,
+.box-war-paraguai figcaption{
 
-  font-size: 1.5rem;
+  width: 50%;
+  height: 100%;
+}
+
+.box-war-paraguai figure img{
+
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.box-war-paraguai figcaption{
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-principal);
+  overflow-y: scroll;
+  border-radius: 10px;
+}
+
+.box-war-paraguai figcaption h1,
+.box-war-paraguai figcaption p,
+.box-war-paraguai figcaption button{
+
+  margin-left: 40px;
+}
+
+.box-war-paraguai figcaption h1{
+
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 30px 0px;
+  margin-left: 40px;
   color: var(--important-color);
+}
+
+.box-war-paraguai figcaption p{
+
+
+  margin: 10px 0px;
+  width: 85%;
+  font-size: 1rem;
+  margin-left: 40px;
+  letter-spacing: 1px;
+  line-height: 23px;
+
 }
 
 /*** CARROSSEL ARROWS ***/
@@ -761,10 +757,51 @@ body{
   color: var(--background-color);
 }
 
+/***** FOOOTEEERRR *****/
+
+footer{
+  width: 100%;
+  height: 25vh;
+  box-shadow: 0px 0px 10px 0px #000;
+  background-color: var(--background-secondary);
+}
+
+footer div{
+
+  width: 100%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer div h1{
+
+  margin-left: 100px;
+  font-size: 1.3rem;
+}
+
+footer div ul{
+
+  margin-right: 100px;
+}
+
+footer p{
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--background-secondary);
+  font-weight: 600;
+  background-color: var(--background-white);
+}
 
 /******* RESPONSIVIDADE ********/
 
 @media all and (max-width: 768px) {
+
+  /******* MENU ********/
 
   #home{
 
@@ -795,4 +832,6 @@ body{
 
     margin-left: 0px;
   }
+
+  /******* TÓPICOS ********/
 }
