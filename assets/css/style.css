@@ -16,7 +16,7 @@
 
 :root{
   --background-principal: #151515;
-  --background-secondary: #272727;
+  --background-secondary:  #1b1b1b;
   --important-color:  #ed7403;
   --background-white: #f4f4f4;
 }
@@ -39,11 +39,9 @@
     background-color:  var(--important-color);
     box-shadow: 0px 0px 30px 30px var(--important-color);
 }
-
-
-.custom-shape-divider-bottom-1661707918 {
+.custom-shape-divider-bottom-1661741990 {
   position: absolute;
-  bottom: -70px;
+  bottom: -100px;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -51,16 +49,15 @@
   transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1661707918 svg {
+.custom-shape-divider-bottom-1661741990 svg {
   position: relative;
   display: block;
-  width: calc(126% + 1.3px);
-  height: 66px;
-  transform: rotateY(180deg);
+  width: calc(116% + 1.3px);
+  height: 106px;
 }
 
-.custom-shape-divider-bottom-1661707918 .shape-fill {
-  fill: #272727;
+.custom-shape-divider-bottom-1661741990 .shape-fill {
+  fill: var(--background-secondary);
 }
 
 /******** BODY *********/
@@ -160,9 +157,7 @@ body{
 
 .menu h1{
 
-  width: 100px;
-  height: 70px;
-  font-size: 2rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   margin-left: 100px;
   display: flex;
@@ -170,20 +165,18 @@ body{
   justify-content: center;
   transition: .5s;
   font-weight: 900;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px #15151590;
 }
 
 .menu-scroll h1{
   height: 60px;
-  background-color: var(--background-principal);
-  box-shadow: 0px 0px 10px 0px #15151590;
+  color: var(--background-principal);
 }
 
 .menu h1 b{
-
-  font-size: 1.3rem;
-  margin: 0px 5px;
+  
+  margin: 0px 10px;
+  transition: .5s;
+  font-weight: 900;
   color: var(--important-color);
 }
 
@@ -196,6 +189,17 @@ body{
 
   cursor: pointer;
   color: var(--background-white);
+}
+
+.menu-scroll h1:hover{
+  color: var(--important-color);
+  cursor: pointer;
+}
+
+.menu-scroll h1:hover b{
+
+  cursor: pointer;
+  color: var(--background-principal);
 }
 
 #menuEvent{
@@ -244,13 +248,20 @@ body{
 .menu ul a{
 
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .menu ul a:hover{
   cursor: pointer;
   color: var(--important-color);
   transition: .5s;
+}
+
+.menu ul hr{
+
+  width: 2px;
+  background-color: var(--important-color);
+  border: none;
 }
 
 .menu-scroll{
@@ -451,7 +462,7 @@ body{
 
   background-image: url(https://i.redd.it/4bxgbhwgtzb81.jpg);
   background-size: cover;
-  height: 110vh;
+  height: 115vh;
 }
 
 .banner{
@@ -517,16 +528,15 @@ body{
 
     width: 85%;
     height: 5%;
-    border-left: 5px solid var(--important-color);
     display: flex;
     justify-content:center;
-    
+    align-items: center;
     flex-direction: column;
 }
 
 .all-titles h2{
 
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-left: 40px;
 
     text-transform: uppercase;
@@ -535,7 +545,7 @@ body{
 .content-categs{
     
     width: 85%;
-    height: 60%;
+    height: 55%;
     margin-top: 70px;
     display: flex;
     justify-content: space-between;
@@ -559,30 +569,22 @@ body{
     position: relative;
 }
 
-.content-categs a h3{
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 2rem;
-  color: var(--background-white);
-  width: 50px;
-  height: 50px;
-  border-radius: 5px;
-  display: flex;
-  justify-content:center;
-  align-items: center;
+.content-categs a:hover{
+  transition: .3s;
+  transform: scale(1.05);
 }
 
 .content-categs a:hover figcaption{
 
+  background-color: var(--important-color);
   transition: .3s;
-  background-color: var(--background-white);
 }
 
 .content-categs a:hover figcaption h1{
 
   transition: .3s;
-  color: var(--background-principal);
+  color: var(--background-white);
+  
 }
 
 .content-categs a:hover figcaption h6{
@@ -605,7 +607,7 @@ body{
 }
 
 .content-categs figure{
-   height: 40%;
+   height: 50%;
 }
 
 .content-categs figure img{
@@ -620,12 +622,11 @@ body{
 .content-categs figcaption{
 
     width: 100%;
-    height: 60%;
+    height: 50%;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     background-color: var(--background-principal);
     display: flex;
-    justify-content:center;
     align-items: flex-start;
     flex-direction: column;
     gap: 10px;
@@ -641,6 +642,8 @@ body{
 .content-categs figcaption h1{
 
     font-size: 1rem;
+    font-weight: 700;
+    margin-top: 25px;
     color: var(--important-color);
     text-transform: uppercase;
 }
@@ -659,7 +662,7 @@ body{
     justify-content:center;
     text-transform: uppercase;
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     font-size: .7rem;
     font-weight: 800;
 }
@@ -702,10 +705,20 @@ body{
 .box-war-paraguai{
 
   display: flex;
-  width: 84%;
-  height: 65%;
-  margin-top: 40px;
+  width: 85.5%;
+  height: 70%;
+  margin-top: 50px;
 
+}
+
+.box-war-paraguai figure{
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px var(--background-principal);
 }
 
 .box-war-paraguai figure,
@@ -719,14 +732,26 @@ body{
 
   width: 100%;
   height: 100%;
-  
+  border-radius: 5px;
+  filter: brightness(70%);
+  box-shadow: 0px 0px 10px 0px #000;
+}
+
+.box-war-paraguai figure h1{
+
+  width: 70%;
+  position: absolute;
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .box-war-paraguai figcaption{
 
   display: flex;
   flex-direction: column;
-
 
 }
 
@@ -739,11 +764,12 @@ body{
 
 .box-war-paraguai figcaption h1{
 
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-transform: uppercase;
   text-align: left;
   margin: 20px 0px;
   margin-left: 40px;
+  font-weight: 900;
   color: var(--important-color);
 }
 
@@ -751,8 +777,8 @@ body{
 
 
   margin: 10px 0px;
-  width: 85%;
-  font-size: .9rem;
+  width: 83%;
+  font-size: 1rem;
   margin-left: 40px;
   letter-spacing: 1px;
   line-height: 23px;
@@ -802,42 +828,37 @@ body{
 /***** FOOOTEEERRR *****/
 
 footer{
+
   width: 100%;
-  height: 30vh;
+  height: 15vh;
   margin-top: 100px;
   background-color: var(--background-secondary);
   background-size: cover;
-}
-
-footer div{
-
-  width: 100%;
-  height: 75%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-footer div h1{
+
+footer h1{
 
   margin-left: 100px;
   font-size: 1.3rem;
 }
 
-footer div ul{
-
-  margin-right: 100px;
+footer h1 b{
+  
+  color: var(--important-color);
 }
 
+
 footer p{
-  width: 100%;
-  height: 25%;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--background-secondary);
   font-weight: 600;
-  
+  margin-right: 100px;
 }
 
 /******* ABOUT-US ********/
@@ -873,11 +894,11 @@ footer p{
 
 .carrossel li {
 
-  height: 445px;
+  height: 400px;
   background-color: var(--background-principal);
   display: flex;
   justify-content: space-between;
-  margin-inline: 10px;
+  margin: 0px 30px;
   border-radius: 10px;
   position: relative;
   cursor: pointer;
@@ -896,8 +917,8 @@ footer p{
 
 .carrossel figure div {
 
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   margin-top: 30px;
   background-color: var(--background-secondary);
   border-radius: 50%;
@@ -929,20 +950,21 @@ footer p{
 
 .carrossel li figcaption h1{
 
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+  color: var(--important-color);
 }
 
 .carrossel li figcaption h4{
 
   font-size: 1rem;
-  color: var(--important-color);
   margin-top: 10px;
 }
 
 .carrossel li figcaption p{
 
-  width: 90%;
-  
+  width: 80%;
+  opacity: .9;
+  font-weight: 600;
   margin-top: 13px;
 }
 
