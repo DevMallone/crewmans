@@ -21,43 +21,43 @@
 </head>
 <body>
 
-  <!----- MENU ------>
-  <nav class="menu">
+<!----- MENU ------>
+<nav class="menu">
 
-    <h1>dream <b>catchers</b></h1>
+  <h1>dream <b>catchers</b></h1>
 
-    <ul class="menuresponse">
-      <a href="#home">Home</a>
-      <hr>
-      <a href="#topics">Tópicos</a>
-      <hr>
-      <a href="#aboutus">Nosso Time</a>
-      <hr>
-      <a href="#feedback">Feedback</a>
-      <hr>
-      <a href="#five">Informations</a>
-    </ul>
+  <ul class="menuresponse">
+    <a href="#home">Home</a>
+    <hr>
+    <a href="#topics">Tópicos</a>
+    <hr>
+    <a href="#aboutus">Nosso Time</a>
+    <hr>
+    <a href="#feedback">Feedback</a>
+    <hr>
+    <a href="#five">Informations</a>
+  </ul>
 
-    <div id="menuEvent">
-      <a onclick="linkFechar()" href="#home">Home</a>
-      <a onclick="linkFechar()" href="#topics">Tópicos</a>
-      <a onclick="linkFechar()" href="#aboutus">Nosso Time</a>
-      <a onclick="linkFechar()" href="#about-project">Sobre o Projeto</a>
-      <a onclick="linkFechar()" href="#five">Informações</a>
-    </div>
+  <div id="menuEvent">
+    <a onclick="linkFechar()" href="#home">Home</a>
+    <a onclick="linkFechar()" href="#topics">Tópicos</a>
+    <a onclick="linkFechar()" href="#aboutus">Nosso Time</a>
+    <a onclick="linkFechar()" href="#about-project">Sobre o Projeto</a>
+    <a onclick="linkFechar()" href="#five">Informações</a>
+  </div>
 
+  
+  <div class="btn-menu">
+    <button id="abrirBtn" onclick="abrirMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
     
-    <div class="btn-menu">
-      <button id="abrirBtn" onclick="abrirMenu()">
-        <i class="fas fa-bars"></i>
-      </button>
-      
-      <button id="fecharBtn" onclick="fecharMenu()">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
+    <button id="fecharBtn" onclick="fecharMenu()">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
 
-  </nav>
+</nav>
 
 <!----- HOME ------>
 <section class="pannels" id="home">
@@ -107,7 +107,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit neque 
                 aliquam reprehenderit?
             </h6>
-            <p>Ver agora <i class="fas fa-angle-right"></i></p>
+            <p>Ver sobre <i class="fas fa-angle-right"></i></p>
           </figcaption>
         </a>
 
@@ -137,9 +137,10 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit neque 
                 aliquam reprehenderit?
             </h6>
-            <p>Ver agora <i class="fas fa-angle-right"></i></p>
+            <p>Ver sobre <i class="fas fa-angle-right"></i></p>
           </figcaption>
         </a>
+        
 
         <a href="#one-war">
           
@@ -153,7 +154,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit neque 
                 aliquam reprehenderit?
             </h6>
-            <p>Ver agora <i class="fas fa-angle-right"></i></p>
+            <p>Ver sobre <i class="fas fa-angle-right"></i></p>
           </figcaption>
         </a>
 
@@ -289,7 +290,7 @@
 <section class="pannels" id="vida-maria">
 
   <!------ TEXT ------->
-  <section class="box-war-paraguai">
+  <section class="box-war-paraguai mobile-war">
     <figcaption>
       <h1>Resumo</h1>
       <p>
@@ -313,7 +314,7 @@
     </figure>
   </section>
   
-  <div  id="content" class="modal modal-one-war">
+  <div onclick="fecharContent()" id="content" class="modal modal-one-war">
     <button onclick="fecharmodal()" class="btn-close-modal">X</button>
   
     <section class="box-modal">
@@ -382,7 +383,7 @@
 <section class="pannels" id="feedback">
 
   <div class="all-titles" style="margin-top: 65px;">
-    <h2>DEixe seu Feedback</h2>
+    <h2>Deixe seu Feedback</h2>
   </div>
 
   <form action="" class="box-feedback">
@@ -430,7 +431,7 @@
 <section class="pannels" id="one-war">
 
   <!------ TEXT ------->
-  <section class="box-war-paraguai">
+  <section class="box-war-paraguai mobile-war">
     
     <figcaption>
       <h1>Resumo</h1>
