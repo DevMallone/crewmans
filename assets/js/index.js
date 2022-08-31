@@ -18,11 +18,11 @@ function abrirMenu(){
   menu.style.display = "flex"
   fecharMenu.style.display = "flex"
   abrirMenu.style.display = "none"
+
 }
 
 function fecharMenu(){
 
-  
   var fecharMenu = document.getElementById('fecharBtn')
   var abrirMenu = document.getElementById('abrirBtn')
 
@@ -33,13 +33,21 @@ function fecharMenu(){
 
 function linkFechar(){
 
-  
   var fecharMenu = document.getElementById('fecharBtn')
   var abrirMenu = document.getElementById('abrirBtn')
-
+  var linkModal = document.getElementById('content')
+  
   menu.style.display = "none";
   abrirMenu.style.display = "flex"
   fecharMenu.style.display = "none"
+  linkModal.style.display = "none"
+}
+
+
+function fecharContent(){
+
+  var antContent = document.getElementById('content')
+  antContent.style.display = "none"
 }
 
 function openTopics(){
