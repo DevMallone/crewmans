@@ -52,10 +52,9 @@ function openTopics(){
 // CARROSSEL PRODUTOS EM DESTAQUES
 
 $('.carrossel').slick({
-  // prevArrow: '.slick-prev-one',
-  // nextArrow: '.slick-next-one',
+  prevArrow: '.slick-prev-one',
+  nextArrow: '.slick-next-one',
   autoplay: true,
-  arrows: false,
   autoplaySpeed: 4000,
   infinite: true,
   speed: 300,
@@ -99,3 +98,4 @@ function openModal(){
 function fecharmodal(){
   content.style.display = "none"
 }
+
