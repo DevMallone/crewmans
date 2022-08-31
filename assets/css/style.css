@@ -268,8 +268,9 @@ body{
 
   height: 70px;
   background-color: var(--background-white);
+  backdrop-filter: blur(10px);
   transition: .5s all;
-  box-shadow: 0px 0px 10px 0px #151515;
+  box-shadow: 0px 0px 10px 1px #151515;
 }
 
 .menu-scroll ul a{
@@ -368,19 +369,14 @@ body{
   font-weight: 700;
 }
 
-.btn-all i{
-
-  display: none;
-}
-
 .btn-all:hover{
   transition: .5s;
   box-shadow: inset 200px 0px 0px 0px var(--important-color);
 }
 
 .btn-all:hover h4{
-  transition: .3s;
-  display: none;
+  color: var(--background-secondary);
+
 }
 
 .btn-all:hover i{
@@ -530,6 +526,41 @@ body{
   color: var(--important-color);
 }
 
+.texto {
+  font-size: 3rem;
+  margin-top: 190px;
+  font-weight: bold;
+  position: absolute;
+  opacity: 0;
+  animation: fader 25s infinite;
+}
+/* cada texto tem um delay de 5 + o valor do delay anterior, meno o primeiro */
+.a {
+  animation-delay: 0s;    
+}
+.b {
+  animation-delay: 5s;
+}
+.c {
+  animation-delay: 10s;
+}
+.d {
+  animation-delay: 15s;
+}
+.e {
+  animation-delay: 20s;
+}
+
+/* Animação acontece apenas entre 0 e 20%, pois são 5 elementos */
+@keyframes fader {
+  10% {
+      opacity: 1;
+  }
+  20% {
+      opacity: 0;
+  }
+}
+
 .banner h1, .banner p,
 .banner h5, .banner button{
 
@@ -610,14 +641,14 @@ body{
 
 .content-categs a:hover figcaption{
 
-  background-color: var(--important-color);
+  background-color: var(--background-white);
   transition: .3s;
 }
 
 .content-categs a:hover figcaption h1{
 
   transition: .3s;
-  color: var(--background-white);
+  color: var(--important-color);
   
 }
 
@@ -878,7 +909,7 @@ footer{
 footer h1{
 
   margin-left: 100px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 footer h1 b{
@@ -921,9 +952,18 @@ footer p{
   transition: .5s;
 }
 
+.box-products:hover #btn-carr{
+  transition: .5s;
+  display: flex;
+}
+
+#btn-carr{
+  display: none;
+}
+
 .carrossel {
 
-  width: 100%;
+  width: 102%;
   display: flex;
 }
 
@@ -933,16 +973,22 @@ footer p{
   background-color: var(--background-principal);
   display: flex;
   justify-content: space-between;
-  margin: 0px 30px;
+  
   border-radius: 10px;
   position: relative;
   cursor: pointer;
   transition: 0.5s;
+  margin: 0px 10px;
+  
+}
 
+.carrossel li:hover .buttons-arrows i{
+
+  display: none;
 }
 
 .carrossel figure {
-
+  
   width: 100%;
   height: 50%;
   display: flex;
@@ -954,6 +1000,7 @@ footer p{
 
   width: 160px;
   height: 160px;
+  border: 2px solid var(--important-color);
   margin-top: 30px;
   background-color: var(--background-secondary);
   border-radius: 50%;
@@ -967,6 +1014,7 @@ footer p{
 
 .img-kaull{background-image: url(..//img/fotospeoples/kaull.jpg);}
 .img-ana{background-image: url(..//img/fotospeoples/ana.jpeg);}
+.img-ster{background-image: url(..//img/fotospeoples/ster.jpeg);}
 
 .carrossel figure:hover {
   cursor: pointer;
@@ -988,7 +1036,6 @@ footer p{
 .carrossel li figcaption h1{
 
   font-size: 1.5rem;
-  color: var(--important-color);
   position: absolute;
   top: 220px;
 }
@@ -997,6 +1044,7 @@ footer p{
 
   font-size: 1rem;
   position: absolute;
+  color: var(--important-color);
   top: 260px;
 }
 
@@ -1007,6 +1055,122 @@ footer p{
   font-weight: 600;
   position: absolute;
   top: 290px;
+  line-height: 23px;
+  text-align: center;
+}
+
+.buttons-arrows{
+
+  width: 107%;
+  height: 20%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons-arrows button{
+
+  height: 100%;
+  width: 4.5%;
+  background-color: #000;
+  box-shadow: 0px 0px 20px 0px #000;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 2rem;
+}
+
+.buttons-arrows button:hover{
+  transition: .5s;
+  background-color: var(--important-color);
+}
+
+/******* FEEDBACKS ********/
+
+#feedback{
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-secondary);
+}
+
+.box-feedback{
+
+  width: 85.5%;
+  height: 50%;
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.box-feedback section{
+
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.box-feedback section div{
+
+  width: 50%;
+  height: 100%;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+
+.box-feedback div input{
+
+  width: 85%;
+  height: 40%;
+  outline: none;
+  background-color: var(--background-principal);
+  border-radius: 5px;
+  border: none;
+  padding: 0px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid #00000000;
+}
+
+.box-feedback div input:focus::placeholder,
+.box-feedback div textarea:focus::placeholder{
+
+  padding-left: 10px;
+  transition: .5s;
+  color: var(--important-color);
+  font-style: italic;
+  opacity: 0;
+}
+
+.box-feedback div input:focus,
+.box-feedback div textarea:focus{
+
+  border: 1px solid var(--important-color);
+  box-shadow: 0px 0px 5px 0px #c05e0290;
+  transition: .5s;
+}
+
+.box-feedback section div textarea{
+
+  width: 93%;
+  height: 100%;
+  padding: 20px;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  resize: none;
+  background-color: var(--background-principal);
+  border: 1px solid #00000000;
 }
 
 /******* RESPONSIVIDADE ********/
