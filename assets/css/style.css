@@ -399,10 +399,11 @@ body{
 
 .modal{
 
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
+  z-index: 9999;
   top: 70px;
   width: 100vw;
   height: 100%;
@@ -413,7 +414,7 @@ body{
 .btn-close-modal{
 
   position: absolute;
-  right: 42px;
+  right: 110px;
   top: 15px;
   width: 60px;
   height: 60px;
@@ -422,11 +423,17 @@ body{
   border: none;
   font-size: 2rem;
   font-weight: 800;
-  background-color: #cf0202;
+  background-color: var(--important-color);
+}
+
+.btn-close-modal:hover{
+
+  transition: .5s;
+  background-color: #c05e02;
 }
 
 .box-modal{
-  width: 90%;
+  width: 80%;
   height: 80%;
   margin-bottom: 70px;
   background-color: var(--background-secondary);
@@ -434,25 +441,52 @@ body{
   overflow: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  
+  border-radius: 10px;
+}
+
+.box-modal div{
+
+  width: 80%;
+  margin: 50px 0px;
+  margin-left: 100px;
 }
 
 .box-modal h1{
 
   font-size: 2rem;
+  margin-left: 100px;
   margin-top: 60px;
+  text-align: left;
   color: var(--important-color);
 }
 
 .box-modal p{
-  width: 80%;
+  width: 100%;
   margin: 20px 0px;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  line-height: 30px;
 }
 
-.movie-modal{
+.box-modal h3{
+
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--important-color);
+}
+
+.box-modal h5{
+  margin: 40px 0px;
+  font-size: 1rem;
+
+}
+
+.movie-modal {
 
   width: 60%;
+  font-size: 3rem;
   margin: 30px 0px;
 }
 
@@ -752,6 +786,7 @@ body{
 
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 
 }
 
@@ -781,7 +816,7 @@ body{
   font-size: 1rem;
   margin-left: 40px;
   letter-spacing: 1px;
-  line-height: 23px;
+  line-height: 30px;
 
 }
 
@@ -924,11 +959,15 @@ footer p{
   border-radius: 50%;
 }
 
-.img-people-1{
-  background-image: url(..//img/Imgmy.jpg);
+.img-people{
+  
   background-size: cover;
   background-position: center;
 }
+
+.img-kaull{background-image: url(..//img/fotospeoples/kaull.jpg);}
+.img-ana{background-image: url(..//img/fotospeoples/ana.jpeg);}
+.img-kaull{background-image: url(..//img/Imgmy.jpg);}
 
 .carrossel figure:hover {
   cursor: pointer;
@@ -939,7 +978,6 @@ footer p{
   width: 100%;
   height: 50%;
   margin-top: 2px;
-  background-color: var(--secundary-background);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -952,20 +990,24 @@ footer p{
 
   font-size: 1.5rem;
   color: var(--important-color);
+  position: absolute;
+  top: 220px;
 }
 
 .carrossel li figcaption h4{
 
   font-size: 1rem;
-  margin-top: 10px;
+  position: absolute;
+  top: 260px;
 }
 
 .carrossel li figcaption p{
 
   width: 80%;
-  opacity: .9;
+  opacity: .5;
   font-weight: 600;
-  margin-top: 13px;
+  position: absolute;
+  top: 290px;
 }
 
 /******* RESPONSIVIDADE ********/
