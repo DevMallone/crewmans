@@ -16,7 +16,7 @@
 
 :root{
   --background-principal: #151515;
-  --background-secondary:  #1b1b1b;
+  --background-secondary:  #050505;
   --important-color:  #ed7403;
   --background-white: #f4f4f4;
 }
@@ -167,6 +167,12 @@ body{
   font-weight: 900;
 }
 
+.menu h1 img{
+
+  width: 50px;
+  margin-right: 10px;
+}
+
 .menu-scroll h1{
   height: 60px;
   color: var(--background-principal);
@@ -224,9 +230,8 @@ body{
   align-items: center;
   justify-content: center;
   border: none;
-  background-color: var(--background-secondary);
+  
   margin-right: 15px;
-  box-shadow: 0px 0px 10px 0px #15151599;
   transition: .5s;
 }
 
@@ -288,13 +293,13 @@ body{
 
     background-color: var(--background-white);
     width: 100%;
-    height: 90px;
+    height: 70px;
   }
 
   .menu h1{
     height: 60px;
     background-color: var(--background-principal);
-    margin-left: 20px;
+    margin-left: 10px;
   }
 
   .btn-menu{
@@ -306,15 +311,16 @@ body{
 
     display: none;
     width: 100%;
-    height: 100vh;
+    height: 140vh;
     transition: .5s;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 70px);
     align-items: center;
     justify-content: center;
     flex-direction: column;
     position: absolute;
-    top: 90px;
-    background-color: var(--background-principal);
+    top: 70px;
+    background-color: #15151599;
+    backdrop-filter: blur(15px);
   }
 
   #menuEvent a{
@@ -326,10 +332,11 @@ body{
     text-transform: uppercase;
     align-items: center;
     justify-content: center;
-    background-color: var(--important-color);
+    background-color: var(--background-white);
     font-size: 1.3rem;
     color: var(--background-principal);
     font-weight: 700;
+    box-shadow:  0px 0px 10px 0px #000;
   }
 
   #menuEvent a:hover{
@@ -346,6 +353,10 @@ body{
 
     display: none;
     background-color: red;
+  }
+
+  .custom-shape-divider-bottom-1661741990{
+    margin-bottom: 11px;
   }
 
 }
@@ -370,14 +381,10 @@ body{
 }
 
 .btn-all:hover{
-  transition: .5s;
-  box-shadow: inset 200px 0px 0px 0px var(--important-color);
+  transition: .4s;
+  box-shadow: inset 0px 100px 0px 0px var(--important-color);
 }
 
-.btn-all:hover h4{
-  color: var(--background-secondary);
-
-}
 
 .btn-all:hover i{
 
@@ -386,6 +393,7 @@ body{
 }
 
 .buttons{
+
   margin-top: 20px;
   width: 100%;
   display: flex;
@@ -504,19 +512,22 @@ body{
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  background-color: #15151599;
+  background-color: #00000090;
 }
 
-.banner button{
+.banner a{
 
   margin-top: 20px;
+  margin-left: 100px;
 }
 
 .banner h5{
 
-  font-size: 2em;
+  font-size: 1.7em;
   color: var(--background-white);
-  font-weight: 300;
+  font-weight: 500;
+  
+  font-style: italic;
 }
 
 .banner h1{
@@ -578,6 +589,96 @@ body{
   font-weight: 600;
 }
 
+/******** EM BREVE *********/
+
+#embreve{
+
+  height: 100vh;
+  background-color: var(--background-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-novidade{
+
+  width: 85.5%;
+  height: 50%;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.box-novidade li{
+  width: 23%;
+  height: 47%;
+  border-radius: 5px;
+  background-color: var(--background-principal);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  box-shadow: 0px 0px 10px 0px #000;
+}
+
+.box-novidade li:hover{
+  transition: .5s;
+  transform: scale(1.05);
+}
+
+.box-novidade li:hover div{
+  cursor: pointer;
+  display: flex;
+}
+
+.box-novidade li DIV{
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: #15151590;
+  backdrop-filter: blur(10px);
+  color: var(--important-color);
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.box-novidade li h1{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 20px;
+  font-size: 1rem;
+  width: 80%;
+}
+
+.box-novidade li h3{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 20px;
+  font-size: .9rem;
+  color: var(--important-color);
+}
+
+.box-novidade li p{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-left: 20px;
+  font-size: .9rem;
+  color: #f4f4f490;
+}
+
 /******** TÓPICOS *********/
 
 #topics{
@@ -608,6 +709,11 @@ body{
     text-transform: uppercase;
 }
 
+.all-titles p{
+  margin-top: 10px;
+  color: #f4f4f490;
+}
+
 .content-categs{
     
     width: 85%;
@@ -628,11 +734,11 @@ body{
 
 .content-categs a{
 
-    width: 23%;
-    height:100%;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 0px #00000090;
-    position: relative;
+  width: 23%;
+  height:100%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px #00000090;
+  position: relative;
 }
 
 .content-categs a:hover{
@@ -673,7 +779,7 @@ body{
 }
 
 .content-categs figure{
-   height: 50%;
+  height: 50%;
 }
 
 .content-categs figure img{
@@ -702,7 +808,7 @@ body{
 .content-categs figcaption h6,
 .content-categs figcaption p{
 
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 .content-categs figcaption h1{
@@ -903,7 +1009,7 @@ footer{
   background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 
@@ -979,7 +1085,7 @@ footer p{
   position: relative;
   cursor: pointer;
   transition: 0.5s;
-  margin: 0px 10px;
+  margin: 0px 15px;
   
 }
 
@@ -1013,8 +1119,12 @@ footer p{
   background-position: center;
 }
 
-.img-kaull{background-image: url(..//img/fotospeoples/kaull.jpg);}
 .img-ana{background-image: url(..//img/fotospeoples/ana.jpeg);}
+.img-andrei{background-image: url(..//img/fotospeoples/andrei.jpeg);}
+.img-arthur{background-image: url(..//img/fotospeoples/arthur.jpeg);}
+.img-emyly{background-image: url(..//img/fotospeoples/emyly.jpeg);}
+.img-julia{background-image: url(..//img/fotospeoples/julia.jpeg);}
+.img-kaull{background-image: url(..//img/fotospeoples/kaull.jpg);}
 .img-ster{background-image: url(..//img/fotospeoples/ster.jpeg);}
 
 .carrossel figure:hover {
@@ -1220,11 +1330,13 @@ footer p{
 
     height: 90%;
     width: 500px;
+    
   }
 
   .content-categs a figcaption{
 
     width: 250px;
+
   }
 
   .content-categs a figcaption h6{
@@ -1285,8 +1397,9 @@ footer p{
   }
 
   .all-titles h2{
-
+    
     margin-left: 0px;
+
   }
 
   /****** box-war-paraguai *******/
@@ -1334,7 +1447,7 @@ footer p{
   }
 
   .banner h1, .banner p,
-  .banner h5, .banner button{
+  .banner h5, .banner a{
 
     margin-left: 0px;
   }
