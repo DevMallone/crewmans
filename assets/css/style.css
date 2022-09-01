@@ -319,13 +319,13 @@ body{
     flex-direction: column;
     position: absolute;
     top: 70px;
-    background-color: #15151599;
+    background-color: #151515;
     backdrop-filter: blur(15px);
   }
 
   #menuEvent a{
     width: 70%;
-    height: 12%;
+    height: 8%;
     transition: .5s;
     border-radius: 5px;
     display: flex;
@@ -342,6 +342,11 @@ body{
   #menuEvent a:hover{
 
     box-shadow: 0px 0px 10px 0px #04d19a;
+  }
+
+  .created{
+    position: absolute;
+    bottom: 50px;
   }
 
   #abrirBtn{
@@ -1635,7 +1640,7 @@ footer p{
   }
 
   .custom-shape-divider-bottom-1661741990{
-    margin-bottom: 0px;
+    display: none;
   }
 
   /**** novidades *****/
