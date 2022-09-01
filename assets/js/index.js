@@ -43,13 +43,6 @@ function linkFechar(){
   linkModal.style.display = "none"
 }
 
-
-function fecharContent(){
-
-  var antContent = document.getElementById('content')
-  antContent.style.display = "none"
-}
-
 function openTopics(){
   
   var openTopics = document.getElementById('topics')
@@ -62,7 +55,7 @@ function openTopics(){
 $('.carrossel').slick({
   prevArrow: '.slick-prev-one',
   nextArrow: '.slick-next-one',
-  autoplay: true,
+  autoplay: false,
   autoplaySpeed: 4000,
   infinite: true,
   speed: 300,
@@ -106,4 +99,3 @@ function openModal(){
 function fecharmodal(){
   content.style.display = "none"
 }
-
