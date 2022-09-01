@@ -1658,3 +1658,95 @@ footer p{
   }
 
 }
+
+@media all and (max-width: 425px) {
+
+
+  .banner{
+
+    align-items: flex-start;
+    padding-left: 40px;
+  }
+
+  .banner p{
+
+    text-align: left;
+    font-size: 1rem;
+  }
+
+  .banner h1{
+    font-size: 3rem;
+  }
+
+  .all-titles p{
+    
+    text-align: center;
+  }
+
+  .box-war-paraguai figcaption p{
+
+    font-size: 1rem;
+    line-height: 20px;
+  }
+
+  .box-feedback section div input{
+    width: 89%;
+  }
+
+  .box-feedback section div textarea{
+    width: 89%;
+  }
+
+  #embreve{
+    position: relative;
+    height: 90vh;
+  }
+
+  #embreve .all-titles{
+
+    position: absolute;
+    top: 0px;
+  }
+
+  .box-feedback button{
+    
+    width: 100%;
+    margin-bottom: 40px;
+
+  }
+
+  .box-novidade{
+    margin-bottom: 80px;
+  }
+
+  .box-novidade{
+    gap: 10px;
+  }
+
+  .box-novidade li{
+    width: 48%;
+    height: 100px;
+  }
+
+  .box-novidade li h1{
+
+    width: 80%;
+    font-size: .7rem;
+  }
+
+  .box-novidade li p{
+
+    width: 100%;
+    font-size:.7rem;
+  }
+
+  .box-war-paraguai figure h1{
+
+    width: 90%;
+    font-size: 1.4rem;
+  }
+
+  .custom-shape-divider-bottom-1661741990{
+    margin-bottom: -10px;
+  }
+}
