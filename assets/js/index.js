@@ -55,8 +55,8 @@ function openTopics(){
 $('.carrossel').slick({
   prevArrow: '.slick-prev-one',
   nextArrow: '.slick-next-one',
-  autoplay: false,
-  autoplaySpeed: 4000,
+  autoplay: true,
+  autoplaySpeed: 3000,
   infinite: true,
   speed: 300,
   slidesToShow: 3,
@@ -87,15 +87,35 @@ $('.carrossel').slick({
   ]
 });
 
-// MODALS
+/************* MODALS **************/
 
-const content = document.getElementById('content')
-const closeBtnModal = document.getElementsByClassName('btn-close-modal')
+const contentOli = document.getElementById('contentOli')
+const contentIrep = document.getElementById('contentIrep')
+const contentDesi = document.getElementById('contentDesi')
+const content1War = document.getElementById('content1War')
 
-function openModal(){
-  content.style.display = "flex"
+const closedAll = document.getElementsByClassName('btn-close-modal')
+
+function openModalOli(){
+  contentOli.style.display = "flex"
+}
+
+function openModalIrep(){
+  contentIrep.style.display = "flex"
+}
+
+function openModalDesi(){
+  contentDesi.style.display = "flex"
+}
+
+function openModal1War(){
+  content1War.style.display = "flex"
 }
 
 function fecharmodal(){
-  content.style.display = "none"
+  
+  contentOli.style.display = "none"
+  contentIrep.style.display = "none"
+  contentDesi.style.display = "none"
+  content1War.style.display = "none"
 }
