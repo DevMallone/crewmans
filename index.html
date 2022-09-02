@@ -155,8 +155,7 @@
             
             <h1>1 Guerra Mundial</h1>
             <h6>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit neque 
-                aliquam reprehenderit?
+              Esse período que ficou conhecido mundialmente como a Grande Guerra durou de 24 de julho
             </h6>
             <p>Ver sobre <i class="fas fa-angle-right"></i></p>
           </figcaption>
@@ -188,13 +187,43 @@
         Oligarquia, vem do grego e significa “governo de poucos”.
       </p>
 
-      <div class="buttons">
-        <button onclick="openModal()" class="btn-all">Ver tudo</button>
-        <button class="btn-all">Baixar</button>
+      <div style="margin-left: 40px; gap: 20px;" class="buttons">
+        <a onclick="openModalOli()" class="btn-all">Ver tudo</a>
+        <a href="assets/pdfs/republicaOligarquica.pdf" target="iframe_download" class="btn-all">Baixar pdf</a>
       </div>
 
     </figcaption>
   </section>
+
+  <!----- MODAL ------>
+  <div onclick="fecharContent()" id="contentOli" class="modal modal-one-war">
+    <button onclick="fecharmodal()" class="btn-close-modal">X</button>
+  
+    <section class="box-modal">
+
+      <h1>República Oligárquica</h1>
+      <div>
+
+      <p>
+        Oligarquia, vem do grego e significa “governo de poucos”. Ou seja, oligarquia designa
+        um governo que é dominado por um grupo de pessoas ou famílias que está unido pela
+        mesma atividade econômica ou partido político.
+        Também chamada de República do Café com Leite, a República Oligárquica, iniciou-se
+        a partir de 1894, com a posse de Prudente de Morais na Presidência da República. Com
+        esse fazendeiro e político do interior de São Paulo, a oligarquia cafeeira chegava
+        efetivamente ao poder. Essa época foi marcada pela influência eleitoral e política de
+        grandes fazendeiros, muitos deles conhecidos como “coronéis”.
+        Outra característica desse período, destacam-se o predomínio das oligarquias agrárias
+        no governo central, especialmente de políticos dos estados de São Paulo, Minas Gerais e
+        Rio de Janeiro. Por conta disso, o poder oligárquico fez com que, durante o período da
+        Primeira República, não houvesse um só partido político de alcance nacional, ocorrendo
+        o então, o Revezamento Presidenciável entre as principais oligarquias. 
+      </p>
+
+      <h5>Desenvolvido por Anna Luiz Costa</h5>
+      </div>
+  </div>
+ 
   
 </section>
 
@@ -336,8 +365,8 @@
         Governo Provisório no Brasil.
       </p>
 
-      <div class="buttons">
-        <a onclick="openModal()" class="btn-all">Ver tudo</a>
+      <div style="gap: 20px;" class="buttons">
+        <a onclick="openModalIrep()" class="btn-all">Ver tudo</a>
         <a href="assets/pdfs/republica.pdf" target="iframe_download" class="btn-all">Baixar pdf</a>
       </div>
       
@@ -349,7 +378,7 @@
   </section>
 
   <!----- MODAL ------>
-  <div onclick="fecharContent()" id="content" class="modal modal-one-war">
+  <div onclick="fecharContent()" id="contentIrep" class="modal modal-one-war">
     <button onclick="fecharmodal()" class="btn-close-modal">X</button>
   
     <section class="box-modal">
@@ -387,7 +416,6 @@
         usado na época para afirmar que o povo não sabia o que estava acontecendo.
       </p>
 
-
       <h3>Primeiras Providências</h3>
 
       <p>
@@ -407,9 +435,6 @@
 
       <h5>Desenvolvido por Anna Luiz Costa</h5>
       </div>
-
-    </section>
-  
   </div>
 
 </section>
@@ -424,17 +449,20 @@
     </p>
   </div>
 
-  <form action="" class="box-feedback">
+  <form action="https://api.staticforms.xyz/submit" method="POST" class="box-feedback">
     <section>
       <div>
-        <input type="text" placeholder="Nome:" id="name">
-        <input type="email" placeholder="E-mail:" id="email">
+        <input type="hidden" name="accessKey" value="6a24ee5c-762d-471c-8828-6d558047d692">
+        <input type="text" name="name" placeholder="Nome:" id="name" required>
+        <input type="email" name="email" placeholder="E-mail:" id="email" required>
       </div>
       <div>
-        <textarea placeholder="Sua mensagem" id="msg"></textarea>
+        <textarea placeholder="Sua mensagem" name="message" required id="msg"></textarea>
       </div>
     </section>
+    <input type="hidden" name="redirectTo" value="thanks.html">
     <button class="btn-all" type="submit">Enviar</button>
+
   </form>
 
 </section>
@@ -456,13 +484,77 @@
         nenhuma participação da população.
       </p>
 
-      <div class="buttons">
-        <button onclick="openModal()" class="btn-all">Ver tudo</button>
-        <a href="assets/pdfs/TrabalhoHIstória.pdf" target="iframe_download" class="btn-all">Baixar</a>
+      <div style="margin-left: 40px; gap: 20px;" class="buttons">
+        <a onclick="openModalDesi()" class="btn-all">Ver tudo</a>
+        <a href="assets/pdfs/republica-das-desigualdades.pdf" target="iframe_download" class="btn-all">Baixar</a>
       </div>
 
     </figcaption>
   </section>
+
+   <!----- MODAL ------>
+   <div onclick="fecharContent()" id="contentDesi" class="modal modal-one-war">
+    <button onclick="fecharmodal()" class="btn-close-modal">X</button>
+  
+    <section class="box-modal">
+
+      <h1>República das Desigualdades </h1>
+      <div>
+
+      <p>
+      No dia, 15 de novembro de 1889, aconteceu a proclamação da república, feita pelos
+      militares com apoio das igrejas e dos grandes donos dos latifundiários, que buscavam
+      mais direitos e pode na sociedade da época.
+      </p>
+
+      <p>
+      A princípio, a proclamação da república não tinha como principal interesse de ser um
+      modelo de estado democrático ou pelo menos que garantisse os direitos para todos, já
+      que, foram os membros da elite que fomentaram a proclamação da república sem
+      nenhuma participação da população. Assim, com o favorecimento da elite, a parcela
+      minoritária principalmente a maioria da população parda e negra foi excluída do
+      processo, permanecendo em situação de miséria e exploração, que refletem até hoje na
+      sociedade em diversos âmbitos da desigualdade.
+      </p>
+
+      <p>
+      Tipos de desigualdades sociais: Econômica; Regional; Racial e de Gênero.
+      </p>
+
+      <p>
+      Desigualdade econômica, é a disparidade de renda e riqueza distribuída entre classes
+      sociais. Ela fica bem nítida ao observar que uma pequena parcela da população concentra
+      a maior parte do dinheiro, enquanto boa parte da sociedade é pobre e passa por diversas
+      consequências advindas da instabilidade financeira.
+      </p>
+
+      <p>
+      Desigualdade Regional, referem-se às desigualdades entre as regiões, entre estados e
+      entre cidades. As desigualdades no Brasil não ocorrem somente dentro das cidades, mas
+      também entre as regiões do país.
+      </p>
+
+      <p>
+      Desigualdade Racial, é a sobreposição de raça ou de classe, essa sobreposição é dada
+      pelos acontecimentos históricos que aconteceram no Brasil, sendo o principal deles a
+      escravidão que refletem na sociedade atual, por exemplo, a violência racial, em especial
+      a brutalidade policial com os jovens negros, fortemente pautada nos estereótipos raciais
+      do negro como criminoso em potencial, e ainda os estereótipos em torno das mulheres
+      negras, que oscilam entre o confinamento no serviço doméstico e sua sexualização em
+      torno da figura da “mulata”. Em síntese, o tema da desigualdade racial nos obriga a pensar
+      sobre suas múltiplas dimensões, assim como sobre os efeitos do racismo em sua produção
+      e reprodução. 
+      </p>
+
+      <p>
+      Desigualdade de gênero, ocorre quando há privilégio de um gênero em detrimento de
+      outro, ou outros. Historicamente, os direitos e vontades do homem se sobrepuseram aos
+      das mulheres
+      </p>
+
+      <h5>Desenvolvido por Andrei Rodrigues</h5>
+      </div>
+  </div>
   
 </section>
 
@@ -534,7 +626,7 @@
 
 </section>
 
-<!----- 2 GUERRA MUNDIAL ------>
+<!----- 1 GUERRA MUNDIAL ------>
 <section class="pannels" id="one-war">
 
   <!------ TEXT ------->
@@ -543,23 +635,33 @@
     <figcaption>
       <h1 style="margin-left: 0px;">SINOPSE</h1>
       <p style="margin-left: 0px;">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ratione. Ullam suscipit aliquid aspernatur accusamus, exercitationem veniam culpa. Nisi distinctio deleniti incidunt accusamus quod dolores sapiente molestiae eaque optio consectetur!
-        <br><br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ratione. Ullam suscipit aliquid 
+        Esse período que ficou conhecido mundialmente como a Grande Guerra durou de 24 de julho de 1914 a 11 de novembro de 1918. Foi o maior conflito até então envolvendo as grandes potências em dois polos: Tríplice Entente (ou Aliados) formada pelos países França, Rússia e Inglaterra e Tríplice Aliança (ou Potências Centrais) formada pela Alemanha, Itália e Áustria-Hungria.
       </p>
 
-      <div class="buttons">
-        <a onclick="openModal()" class="btn-all">Ver tudo</a>
-        <a href="assets/pdfs/TrabalhoHIstória.pdf" target="iframe_download" class="btn-all">Baixar</a>
+      <div style="gap: 20px;" class="buttons">
+        <a onclick="openModal1War()" class="btn-all">Ver tudo</a>
+        <a  class="btn-all">Baixar</a>
       </div>
 
     </figcaption>
 
     <figure>
       <img src="https://images2.alphacoders.com/555/555455.jpg" alt="">
-      <h1>2 Guerra Mundial</h1>
+      <h1>1 Guerra Mundial</h1>
     </figure>
   </section>
+
+  <!----- MODAL ------>
+  <div onclick="fecharContent()" id="content1War" class="modal modal-one-war">
+    <button onclick="fecharmodal()" class="btn-close-modal">X</button>
+  
+    <section class="box-modal">
+
+      <h1>Conteúdo em breve</h1>
+
+  </div>
+  
+  
   
 </section>
 
