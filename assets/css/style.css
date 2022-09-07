@@ -12,6 +12,245 @@
   scroll-behavior: smooth;
 }
 
+.custom-shape-divider-bottom-1662316989 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1662316989 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 90px;
+}
+
+.custom-shape-divider-bottom-1662316989 .shape-fill {
+  fill: var(--background-secondary);
+}
+
+/******************************************************/
+
+.custom-shape-divider-bottom-1662570611 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1662570611 svg {
+  position: relative;
+  display: block;
+  width: calc(176% + 1.3px);
+  height: 140px;
+}
+
+.custom-shape-divider-bottom-1662570611 .shape-fill {
+  fill: #FFFFFF;
+}
+
+/******** LIGHT MODE *********/
+
+.light-mode{
+
+  background-color: #d3d3d3;
+  color: #000;
+  transition: .3s;
+}
+
+.light-mode .custom-shape-divider-bottom-1662316989 .shape-fill {
+  fill: var(--background-l-principal);
+}
+
+/******** MODALS *********/
+
+.light-mode .modal{
+
+  animation: alguma .3s;
+  
+}
+
+.light-mode .box-modal{
+
+  animation: boxmodal .3s;
+  background-color: var(--background-l-principal);
+}
+
+@keyframes alguma{
+
+  0%{
+    opacity: 0;
+  }
+
+  from{
+    
+  }
+}
+
+@keyframes boxmodal{
+
+  0%{
+    top: 100%;
+  }
+  
+  from{
+    top: -300%;
+    
+  }
+}
+
+.light-mode .box-modal h1,
+.light-mode .box-modal h3{
+
+  color: var(--l-color-normal);
+  font-weight: 700;
+}
+
+.light-mode .box-modal p{
+
+  color: var(--background-secondary);
+  font-weight: 700;
+}
+
+/**** LIGHT MENU *****/
+
+.light-mode .menu-scroll{
+  background: var(--background-principal);
+}
+
+.light-mode .menu-scroll h1,
+.light-mode .menu-scroll a{
+
+  color: var(--background-l-white);
+}
+
+.light-mode .menu hr{
+
+  background-color: var(--l-color);
+}
+
+.light-mode .menu h1:hover,
+.light-mode .menu a:hover{
+  color: var(--l-color);
+}
+
+/**** LIGHT MENU *****/
+
+/**** TOPICOS *****/
+
+.light-mode .content-categs a{
+
+  box-shadow: #000 0px 0px 3px 0px;
+}
+
+.light-mode .content-categs a figcaption{
+  background: var(--l-color);
+}
+
+.light-mode .content-categs a:hover figcaption p,
+.light-mode .content-categs a:hover figcaption p i,
+.light-mode .content-categs a:hover figcaption h1{
+  color: var(--background-l-principal);
+}
+
+.light-mode .content-categs a:hover figcaption h6{
+
+  color: var(--background-l-principal);
+}
+
+.light-mode .content-categs a figcaption h1{
+  color: var(--background-l-principal);
+}
+
+/**** TITLES *****/
+
+.light-mode .all-titles h2{
+  color: var(--l-color-normal);
+}
+
+/**** BENNER INITIAL *****/
+
+.light-mode #home{
+  background-image: url(https://i.giphy.com/media/LR6oIqNZyWsnsJFHs0/giphy.gif);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: .3s;
+}
+
+.light-mode .banner{
+  background: #00000090;
+}
+
+/**** PAINELS *****/
+
+.light-mode #topics,
+.light-mode #aboutus,
+.light-mode #feedback,
+.light-mode #embreve{
+
+  background-color: var(--background-l-secondary);
+}
+
+.light-mode .box-war-paraguai figcaption p{
+
+  font-weight: 800;
+  color: var(--background-secondary);
+}
+
+.light-mode .box-war-paraguai figure{
+
+  box-shadow: 0px 0px 0px 0px #4A42EC;
+  border: 2px solid #4A42EC;
+}
+
+.light-mode .box-war-paraguai figcaption h1{
+
+  color:var(--l-color-normal) ;
+}
+
+/**** BTN ALL *****/
+
+.light-mode .btn-all{
+  border: var(--l-color-normal) 2px solid;
+  color: var(--l-color-normal);
+}
+
+.light-mode .btn-all:hover{
+  box-shadow: 0px 100px 0px 0px inset var(--l-color-normal);
+  color: var(--background-l-principal);
+}
+
+.light-mode .btn-close-modal{
+
+  background: var(--l-color);
+}
+
+/**** EMBREVE *****/
+
+.light-mode .box-novidade li{
+  background: var(--l-color);
+}
+
+/**** NOSSO TIME *****/
+
+.light-mode .carrossel li{
+  background: var(--l-color);
+}
+
+.light-mode .carrossel li p{
+
+  color: var(--background-l-principal);
+}
+
 /********** ROOT *************/
 
 :root{
@@ -19,6 +258,11 @@
   --background-secondary:  #050505;
   --important-color:  #ed7403;
   --background-white: #f4f4f4;
+
+  --background-l-principal: #fefefe;
+  --background-l-secondary:  #f2f2f2;
+  --l-color: radial-gradient(circle at top left,#4A42EC 0%,#521d91 100%);
+  --l-color-normal: #4A42EC;
 }
 
 /********** SCROLL BAR *************/
@@ -39,26 +283,42 @@
     background-color:  var(--important-color);
     box-shadow: 0px 0px 30px 30px var(--important-color);
 }
-.custom-shape-divider-bottom-1661741990 {
-  position: absolute;
-  bottom: -110px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
+
+.light-mode::-webkit-scrollbar{
+
+  width: 7px;
+  margin-top: 10px;
 }
 
-.custom-shape-divider-bottom-1661741990 svg {
-  position: relative;
-  display: block;
-  width: calc(116% + 1.3px);
-  height: 106px;
+.light-mode::-webkit-scrollbar-track{
+
+  background-color: var(--background-secondary);
 }
 
-.custom-shape-divider-bottom-1661741990 .shape-fill {
-  fill: var(--background-secondary);
+.light-mode::-webkit-scrollbar-thumb{
+
+  background-color:  var(--l-color-normal);
+  box-shadow: 0px 0px 30px 30px var(--l-color-normal);
 }
+
+
+.light-mode .box-modal::-webkit-scrollbar{
+
+  width: 7px;
+  margin-top: 10px;
+}
+
+.light-mode .box-modal::-webkit-scrollbar-track{
+
+  background-color: var(--background-secondary);
+}
+
+.light-mode .box-modal::-webkit-scrollbar-thumb{
+
+  background-color:  var(--l-color-normal);
+  box-shadow: 0px 0px 30px 30px var(--l-color-normal);
+}
+
 
 /******** BODY *********/
 
@@ -108,7 +368,8 @@ body{
 
   display: flex;
   gap: 20px;
-  margin-right: 100px;
+  position: relative;
+  right: -150px;
 }
 
 .menu ul a{
@@ -276,6 +537,8 @@ body{
   backdrop-filter: blur(10px);
   transition: .5s all;
   box-shadow: 0px 0px 10px 1px #151515;
+  display: flex;
+  align-items: center;
 }
 
 .menu-scroll ul a{
@@ -286,8 +549,133 @@ body{
   color: var(--background-principal);
 }
 
+/******** CONFIGURAÇÕES *********/
+
+.configurations{
+
+  width: 7%;
+  height: 100%;
+  margin-right: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.configurations i{
+
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5em;
+  cursor: pointer;
+  background-color: var(--background-white);
+  box-shadow: 0px 0px 5px 0px #00000090;
+  color: var(--background-principal);
+}
+
+.configurations i:hover{
+  
+  transition: .5s;
+  background-color: var(--important-color);
+  color: var(--background-white);
+  box-shadow: 0px 0px 20px 0px var(--important-color);
+}
+
+
+.menu-scroll .content-config{
+  
+  top: 70px;
+}
+
+.content-config{
+
+  width: 250px;
+  height: 300px;
+  background-color: rgb(179, 179, 179);
+  position: absolute;
+  right: 0px;
+  top: 100px;
+  animation: animate ;
+  animation-duration: .5s;
+  box-shadow: -15px 15px 10px 0px #05050590;
+  display: none;
+  padding-left: 23px;
+  border-bottom-left-radius: 10px;
+  flex-direction: column;
+}
+
+.content-config li{
+
+  width: 84%;
+  height: 15%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 20px;
+  border-radius: 5px;
+  background-color: var(--background-principal);
+}
+
+.content-config p{
+
+  
+  margin: 20px 0px;
+  color: var(--background-secondary);
+  align-items: flex-start;
+  font-weight: 700;
+}
+
+@keyframes animate{
+
+  from{
+    position: absolute;
+    right: -30%;
+  }
+}
+
+.fechar{
+
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  float: right;
+  cursor: pointer;
+}
+
 /* Estilo para resolução menor que 750 pixels */
 @media all and (max-width: 768px) {
+
+  .configurations i{
+
+    position: absolute;
+    right: 100px;
+  }
+
+  .content-config{
+
+    width: 100vw;
+    height: 100vh;
+    top: 72px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content-config li{
+
+    margin-left: 20px;
+    width: 91.5%;
+    height: 60px;
+  }
+
+  .content-config p{
+    margin-left: 20px;
+    margin: 30px ;
+  }
 
   .menu{
 
@@ -311,11 +699,11 @@ body{
 
     display: none;
     width: 100%;
-    height: 140vh;
+    height: 100vh;
     transition: .5s;
     height: calc(100vh - 70px);
     align-items: center;
-    justify-content: center;
+    padding-top: 60px;
     flex-direction: column;
     position: absolute;
     top: 70px;
@@ -325,7 +713,7 @@ body{
 
   #menuEvent a{
     width: 70%;
-    height: 8%;
+    height: 10%;
     transition: .5s;
     border-radius: 5px;
     display: flex;
@@ -509,7 +897,7 @@ body{
   background-image: url(..//img/backgrounds/barco.jpg);
   background-size: cover;
   background-position: center;
-  height: 115vh;
+  height: 100vh;
 }
 
 .banner{
@@ -1434,6 +1822,11 @@ footer p{
     background: none;
     margin-left: 35px;
     color: var(--background-principal);
+  }
+
+  .menu-scroll{
+
+    height: 70px;
   }
 
   /******* HOME ********/
