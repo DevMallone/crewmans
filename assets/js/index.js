@@ -2,7 +2,7 @@
 window.addEventListener("scroll", function () {
 
   var header = document.querySelector("nav");
-  header.classList.toggle("menu-scroll", window.scrollY > 0)
+  header.classList.toggle("menu-scroll", window.scrollY > 10)
 })
 
 
@@ -119,3 +119,59 @@ function fecharmodal(){
   contentDesi.style.display = "none"
   content1War.style.display = "none"
 }
+
+
+/************* OPEN CONFIG **************/
+
+const modal = document.querySelector('.content-config')
+const btnConfigClose = document.querySelector('.fa-times')
+const btnConfigOpen = document.querySelector('.fa-cog')
+
+btnConfigClose.style.display = 'none';
+
+function openConfig(){
+  
+  modal.style.display = 'block';
+  btnConfigOpen.style.display = 'none';
+  btnConfigClose.style.display = 'flex'
+}
+
+function fecha(){
+
+  modal.style.display = 'none';
+  btnConfigOpen.style.display = 'flex';
+  btnConfigClose.style.display = 'none';
+
+}
+
+/************* DARKMODE **************/
+
+function darkmode(){
+  var setTheme = document.body
+  setTheme.classList.toggle("light-mode")
+
+  var theme;
+
+  if(setTheme.classList.contains("light-mode")){
+    
+    theme = "DARK"
+  }else{
+    console.log("Light mode")
+    theme= "LIGHT"
+  }
+
+
+
+  // Salvar no LOCALSTORAGE
+  localStorage.setItem("PageTheme", JSON.stringify(theme));
+}
+
+let GetTheme = JSON.parse(localStorage.getItem("PageTheme"));
+console.log(GetTheme);
+
+if(GetTheme === "DARK"){
+  document.body.classList = "light-mode";
+}
+
+
+feather.replace()
