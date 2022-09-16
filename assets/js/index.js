@@ -49,9 +49,43 @@ function openTopics(){
   openTopics.style.display = "flex"
 }
 
+// CARROSSEL CATEGGORIES
+$('.carrossel-categ').slick({
+  prevArrow: '.slick-prev-categ',
+  nextArrow: '.slick-next-categ',
+  autoplay: true,
+  autoplaySpeed: 3000,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
 
-// CARROSSEL PRODUTOS EM DESTAQUES
-
+// CARROSSEL PEOPLES WORK
 $('.carrossel').slick({
   prevArrow: '.slick-prev-one',
   nextArrow: '.slick-next-one',
@@ -86,6 +120,7 @@ $('.carrossel').slick({
     }
   ]
 });
+
 
 /************* MODALS **************/
 
@@ -155,12 +190,15 @@ function darkmode(){
   if(setTheme.classList.contains("light-mode")){
     
     theme = "DARK"
+
   }else{
     console.log("Light mode")
     theme= "LIGHT"
   }
 
-
+  modal.style.display = "none";
+  btnConfigOpen.style.display = 'flex';
+  btnConfigClose.style.display = 'none';
 
   // Salvar no LOCALSTORAGE
   localStorage.setItem("PageTheme", JSON.stringify(theme));
