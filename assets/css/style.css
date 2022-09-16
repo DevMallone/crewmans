@@ -1564,7 +1564,7 @@ footer p{
 .box-feedback div input{
 
   width: 90%;
-  height: 40%;
+  height: 80px;
   outline: none;
   background-color: var(--background-principal);
   border-radius: 5px;
@@ -1598,7 +1598,7 @@ footer p{
 .box-feedback section div textarea{
 
   width: 93%;
-  height: 100%;
+  height: 303px;
   padding: 20px;
   outline: none;
   border-radius: 5px;
