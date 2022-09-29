@@ -33,6 +33,169 @@
   fill: var(--background-secondary);
 }
 
+.mondalProfiles{
+  position: fixed;
+  top: 0;
+  left: 0px;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 0px;
+  background-color: #000000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  animation: modalProfiles .5s;
+}
+
+@keyframes modalProfiles {
+  0%{
+    opacity: 0;
+  }
+
+  from{
+    
+  }
+}
+
+.mondalProfiles section{
+  height: 80%;
+  margin-top: 60px;
+  width: 85%;
+  border-radius: 10px;
+  background-color: var(--background-principal);
+  display: flex;
+
+}
+
+.mondalProfiles section figure{
+  width: 50%;
+  height: 100%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mondalProfiles section figure div{
+
+  width: 90%;
+  height: 90%;
+  background-size: cover;
+  background-color: #000;
+  border: 4px solid var(--important-color);
+  border-radius: 10px;
+}
+
+.mondalProfiles section figcaption{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mondalProfiles section figcaption h1{
+
+  font-weight: 900;
+  font-size: 3rem;
+  margin-top: 30px;
+  text-align: left;
+  color: var(--important-color);
+  text-transform: uppercase;
+}
+
+
+.buttonCloseModalPeoples{
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: 70px;
+  right: 0px;
+  border-bottom-left-radius: 50px;
+  border: none;
+}
+
+.buttonCloseModalPeoples i{
+  color: var(--important-color);
+  font-size: 3rem;
+  margin-left: 10px;
+}
+
+.mondalProfiles section figcaption hr{
+
+  width: 60%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  background-color: var(--background-l-principal);
+  height: 1px;
+  border: none;
+}
+
+.mondalProfiles section figcaption h4{
+
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.mondalProfiles section figcaption h3{
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--important-color);
+}
+
+.conteudosPeoples{
+
+  width: 80%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contatosPeoples{
+
+  width: 80%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contatosPeoples div{
+
+  display: flex;
+  gap: 15px;
+}
+
+.contatosPeoples i{
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: var(--background-l-secondary);
+  color: var(--background-principal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.conteudosPeoples a{
+  list-style: circle;
+  color: var(--background-l-secondary);
+}
+
+.mondalProfiles section figcaption h1,
+.mondalProfiles section figcaption hr,
+.mondalProfiles section figcaption h4,
+.conteudosPeoples,
+.contatosPeoples,
+.mondalProfiles section figcaption h2,
+.mondalProfiles section figcaption p{
+
+  margin-left: 50px;
+}
+
 /******************************************************/
 
 .custom-shape-divider-bottom-1662570611 {
