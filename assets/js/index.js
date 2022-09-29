@@ -211,5 +211,44 @@ if(GetTheme === "DARK"){
   document.body.classList = "light-mode";
 }
 
+/************* MODALS PEOPLES **************/
 
-feather.replace()
+const modalAna = document.getElementById("modalAna")
+const modalAndrei = document.getElementById("modalAndrei")
+const modalArthur = document.getElementById("modalArthur")
+const modalEmyly = document.getElementById("modalEmyly")
+const modalEster = document.getElementById("modalEster")
+const modalJulia = document.getElementById("modalJulia")
+const modalKaull = document.getElementById("modalKaull")
+
+function openAnaModal(){
+  modalAna.style.display = "flex";
+}
+function openAndreiModal(){
+  modalAndrei.style.display = "flex";
+}
+function openArthurModal(){
+  modalArthur.style.display = "flex";
+}
+function openEmylyModal(){
+  modalEmyly.style.display = "flex";
+}
+function openEsterModal(){
+  modalEster.style.display = "flex";
+}
+function openJuliaModal(){
+  modalJulia.style.display = "flex";
+}
+function openKaullModal(){
+  modalKaull.style.display = "flex";
+}
+
+function closeModalPeople(){
+  modalAna.style.display = 'none';
+  modalAndrei.style.display = "none";
+  modalArthur.style.display = "none";
+  modalEmyly.style.display = "none";
+  modalEster.style.display = "none";
+  modalJulia.style.display = "none";
+  modalKaull.style.display = "none";
+}
