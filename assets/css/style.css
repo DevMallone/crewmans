@@ -33,169 +33,6 @@
   fill: var(--background-secondary);
 }
 
-.mondalProfiles{
-  position: fixed;
-  top: 0;
-  left: 0px;
-  z-index: 9999;
-  width: 100vw;
-  height: 100vh;
-  margin-top: 0px;
-  background-color: #000000;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  animation: modalProfiles .5s;
-}
-
-@keyframes modalProfiles {
-  0%{
-    opacity: 0;
-  }
-
-  from{
-    
-  }
-}
-
-.mondalProfiles section{
-  height: 80%;
-  margin-top: 60px;
-  width: 85%;
-  border-radius: 10px;
-  background-color: var(--background-principal);
-  display: flex;
-
-}
-
-.mondalProfiles section figure{
-  width: 50%;
-  height: 100%;
-  
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mondalProfiles section figure div{
-
-  width: 90%;
-  height: 90%;
-  background-size: cover;
-  background-color: #000;
-  border: 4px solid var(--important-color);
-  border-radius: 10px;
-}
-
-.mondalProfiles section figcaption{
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.mondalProfiles section figcaption h1{
-
-  font-weight: 900;
-  font-size: 3rem;
-  margin-top: 30px;
-  text-align: left;
-  color: var(--important-color);
-  text-transform: uppercase;
-}
-
-
-.buttonCloseModalPeoples{
-  position: absolute;
-  width: 90px;
-  height: 90px;
-  top: 70px;
-  right: 0px;
-  border-bottom-left-radius: 50px;
-  border: none;
-}
-
-.buttonCloseModalPeoples i{
-  color: var(--important-color);
-  font-size: 3rem;
-  margin-left: 10px;
-}
-
-.mondalProfiles section figcaption hr{
-
-  width: 60%;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  background-color: var(--background-l-principal);
-  height: 1px;
-  border: none;
-}
-
-.mondalProfiles section figcaption h4{
-
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  font-weight: 900;
-}
-
-.mondalProfiles section figcaption h3{
-
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: var(--important-color);
-}
-
-.conteudosPeoples{
-
-  width: 80%;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.contatosPeoples{
-
-  width: 80%;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.contatosPeoples div{
-
-  display: flex;
-  gap: 15px;
-}
-
-.contatosPeoples i{
-  width: 50px;
-  height: 50px;
-  border-radius: 5px;
-  background-color: var(--background-l-secondary);
-  color: var(--background-principal);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
-
-.conteudosPeoples a{
-  list-style: circle;
-  color: var(--background-l-secondary);
-}
-
-.mondalProfiles section figcaption h1,
-.mondalProfiles section figcaption hr,
-.mondalProfiles section figcaption h4,
-.conteudosPeoples,
-.contatosPeoples,
-.mondalProfiles section figcaption h2,
-.mondalProfiles section figcaption p{
-
-  margin-left: 50px;
-}
-
 /******************************************************/
 
 .custom-shape-divider-bottom-1662570611 {
@@ -365,7 +202,8 @@
 .light-mode #topics,
 .light-mode #aboutus,
 .light-mode #feedback,
-.light-mode #embreve{
+.light-mode #embreve,
+.light-mode #sobrenos{
 
   background-color: var(--background-l-secondary);
 }
@@ -402,12 +240,6 @@
 .light-mode .btn-close-modal{
 
   background: var(--l-color);
-}
-
-#btn-home{
-
-  border: var(--background-l-principal) 2px solid;
-  color: var(--background-l-principal);
 }
 
 /**** EMBREVE *****/
@@ -452,13 +284,12 @@
 
 ::-webkit-scrollbar-track{
 
-  background-color: var(--background-secondary);
+  background-color: var(--l-color);
 }
 
 ::-webkit-scrollbar-thumb{
 
   background-color:  var(--important-color);
-  box-shadow: 0px 0px 30px 30px var(--important-color);
 }
 
 /******** BODY *********/
@@ -467,7 +298,7 @@ body{
 
   width: 100%;
   height: 100vh;
-  background-color: var(--background-principal);
+  background-color: var(--background-secondary);
 }
 
 /******** PANNELS *********/
@@ -475,11 +306,15 @@ body{
 .pannels{
 
   width: 100%;
-  height: 100vh;
+  height: 720px;
   display: flex;
   align-items: center;
   justify-content: center;
   
+}
+
+.conteudos{
+  background-color: var(--background-principal);
 }
 
 .pannels h1{
@@ -494,7 +329,7 @@ body{
 
   width: 100%;
   height: 100px;
-  background: #f4f4f400;
+  
   z-index: 99999;
   display: flex;
   align-items: center;
@@ -510,11 +345,11 @@ body{
   display: flex;
   gap: 20px;
   position: relative;
-  right: -150px;
+  right: -100px;
 }
 
 .menu ul a{
-  font-size: .9rem;
+  font-size: .8rem;
 }
 
 .btn-menu{
@@ -723,17 +558,23 @@ body{
   border-radius: 50%;
   font-size: 1.5em;
   cursor: pointer;
-  background-color: var(--background-white);
-  box-shadow: 0px 0px 5px 0px #00000090;
-  color: var(--background-principal);
+  background-color: var(--important-color);
+  box-shadow: 0px 0px 20px 0px var(--important-color);
+  transition: .5s;
 }
 
 .configurations i:hover{
   
-  transition: .5s;
-  background-color: var(--important-color);
-  color: var(--background-white);
-  box-shadow: 0px 0px 20px 0px var(--important-color);
+  animation: infinite config 2s ;
+  background-color: var(--background-l-principal);
+  color: var(--important-color);
+  box-shadow: none;
+}
+
+@keyframes config {
+  100%{
+    transform: rotate(360deg);
+  }
 }
 
 
@@ -1054,10 +895,9 @@ body{
 
 #home{
 
-  background-image: url(..//img/backgrounds/aaa.jpg);
+  background-image: url(https://images7.alphacoders.com/678/678972.jpg);
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   height: 100vh;
 }
 
@@ -1081,18 +921,19 @@ body{
 .banner h5{
 
   font-size: 1.7em;
-  color: var(--background-white);
-  font-weight: 500;
-  
-  font-style: italic;
+  margin-top: 100px;
+  font-weight: 800;
+  text-transform: uppercase;
+
 }
 
 .banner h1{
 
   text-transform: uppercase;
   margin: 20px 0px;
-  font-weight: 900;
   color: var(--important-color);
+  font-weight: 900;
+  
 }
 
 .texto {
@@ -1138,103 +979,34 @@ body{
 
 .banner p{
 
-  width: 35%;
+  width: 42%;
   margin-bottom: 20px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: var(--background-white);
-  opacity: .9;
+  opacity: .8;
   font-weight: 600;
 }
 
-/******** EM BREVE *********/
-
-#embreve{
-
-  height: 100vh;
-  background-color: var(--background-secondary);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.box-novidade{
-
-  width: 85.5%;
-  height: 50%;
-  margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.box-novidade li{
-  width: 23.7%;
-  height: 47%;
-  border-radius: 5px;
-  background-color: var(--background-principal);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  position: relative;
-  box-shadow: 0px 0px 10px 0px #000;
-}
-
-.box-novidade li:hover{
-  transition: .5s;
-  transform: scale(1.05);
-}
-
-.box-novidade li:hover div{
-  cursor: pointer;
-  display: flex;
-}
-
-.box-novidade li DIV{
-
-  width: 100%;
-  height: 100%;
+.custom-shape-divider-bottom-1664114460 {
   position: absolute;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  background-color: #15151590;
-  backdrop-filter: blur(10px);
-  color: var(--important-color);
-  border-radius: 5px;
-  font-size: 1.5rem;
-  font-weight: 800;
-  font-style: italic;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
 }
 
-.box-novidade li h1{
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin-left: 20px;
-  font-size: 1rem;
-  width: 80%;
+.custom-shape-divider-bottom-1664114460 svg {
+  position: relative;
+  display: block;
+  width: calc(130% + 1.3px);
+  height: 150px;
+  transform: rotateY(180deg);
 }
 
-.box-novidade li h3{
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin-left: 20px;
-  font-size: .9rem;
-  color: var(--important-color);
-}
-
-.box-novidade li p{
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin-left: 20px;
-  font-size: .9rem;
-  color: #f4f4f490;
+.custom-shape-divider-bottom-1664114460 .shape-fill {
+  fill: var(--background-secondary);
 }
 
 /******** TÓPICOS *********/
@@ -1270,7 +1042,21 @@ body{
   margin: 10px;
   position: relative;
   border-radius: 5px;
+  border: none;
   background-color: var(--background-principal);
+}
+
+.carrossel-categ a:hover{
+
+  background-color: var(--l-color);
+  transform: scale(.98);
+  transition: .3s;
+  z-index: 999;
+}
+
+.carrossel-categ a:hover h5{
+  color: var(--important-color);
+  transition: .3s;
 }
 
 .carrossel-categ a figure{
@@ -1348,7 +1134,85 @@ body{
   color: #f4f4f490;
 }
 
-/******* CARROSSEL CATEGS *******/
+/******* SOBRE A EQUIPE *******/
+
+#sobrenos{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background:var(--background-secondary);
+}
+
+.nossaEquipe{
+  width: 85%;
+  height: 60%;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.nossaEquipe hr{
+  width: 3px ;
+  background-color: var(--important-color);
+  border: none;
+  height: 100%;
+}
+
+.nossaEquipe figure{
+
+  width: 50%;
+  height: 100%;
+  background-color: var(--background-principal);
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nossaEquipe figure img{
+
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  box-shadow: var(--important-color) 0px 0px 10px 0px;
+  border: 1px solid var(--l-color);
+}
+
+.nossaEquipe figure h1{
+
+  font-size: 2rem;
+  margin-top: 30px;
+}
+
+.nossaEquipe figcaption{
+
+  width: 50%;
+  height: 100%;
+  display: flex;
+  
+  flex-direction: column;
+}
+
+.nossaEquipe figcaption h4{
+  
+  font-size: 1.4rem;
+  color: var(--important-color);
+  margin-top: 30px;
+}
+
+.nossaEquipe figcaption p{
+  width: 80%;
+  font-size: 1rem;
+  margin: 30px 0px;
+}
+
+.nossaEquipe figcaption h4,
+.nossaEquipe figcaption p,
+.nossaEquipe figcaption a{
+  margin-left: 50px;
+}
 
 /******* WARR-PARAGUAI ********/
 
@@ -1498,19 +1362,216 @@ body{
   color: var(--important-color);
 }
 
+/******** PROVAS *********/
+
+#provas{
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-secondary);
+}
+
+.provas {
+
+  width: 85%;
+  height: 30%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--background-principal);
+  border-radius: 5px;
+}
+
+.provas h1{
+
+  font-size: 2rem;
+  color: var(--important-color);
+}
+
+.provas p{
+  width: 55%;
+  text-align: center;
+}
+
+
+.box-products-provas {
+
+  width: 86%;
+  height: 30%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.carrossel-provas{
+
+  width: 100%;
+  display: flex;
+}
+
+.carrossel-provas a{
+
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  position: relative;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--background-principal);
+}
+
+.carrossel-provas a figure{
+
+  width: 100%;
+  height: 100%;
+}
+
+.carrossel-provas a figure img{
+
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.carrossel-provas a figcaption{
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  border-radius: 5px;
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  background-color: #00000099;
+  backdrop-filter: blur(10px);
+  z-index: 99;
+}
+
+.carrossel-provas a figcaption h1{
+
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--important-color);
+  
+}
+
+.carrossel-provas a figcaption h5{
+
+  margin-top: 10px;
+  color: var(--background-l-principal);
+}
+
+.carrossel-provas a figure:hover figcaption{
+  opacity: 1;
+}
+
 /***** FOOOTEEERRR *****/
 
 footer{
 
   width: 100%;
-  height: 15vh;
+  height: 25vh;
   margin-top: 100px;
   background-color: var(--background-secondary);
+  background-image: url(..//img/backgrounds/pinkbarco.jpg);
   background-size: cover;
+}
+
+footer div{
+  
+  width: 100%;
+  height: 100%;
+  background-color: #00000099;
+  box-shadow: 0px 0px 10px 0px #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.medias{
+
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.medias figcaption{
+
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.medias figcaption h3{
+  width: 40%;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+}
+
+.medias figcaption section{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.medias figcaption section a{
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  background-color: #00000090;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+.medias figcaption section a:hover{
+
+  transition: .3s;
+  background-color: var(--important-color);
+  box-shadow: 0px 0px 10px 0px var(--important-color);
+}
+
+.medias figcaption section a i{
+
+  font-size: 1.3rem;
+}
+
+.medias h1{
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  gap: 20px;
+  font-weight: 900;
+  font-size: 1.4rem;
+  margin-left: 100px;
+}
+
+.medias h1 img{
+  width: 50px;
+}
+
 
 footer p{
 
@@ -1518,6 +1579,9 @@ footer p{
   align-items: center;
   justify-content: center;
   font-weight: 600;
+  width: 100%;
+  height: 30%;
+  background-color: #00000090;
 }
 
 /******* ABOUT-US ********/
@@ -1533,7 +1597,7 @@ footer p{
 
   width: 85%;
   height: 67%;
-  margin-top: 40px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1562,7 +1626,7 @@ footer p{
 
 .carrossel li {
 
-  height: 400px;
+  height: 370px;
   background-color: var(--background-principal);
   display: flex;
   justify-content: space-between;
@@ -1575,15 +1639,15 @@ footer p{
   
 }
 
-.carrossel li:hover .buttons-arrows i{
+.carrossel li:hover{
 
-  display: none;
+  background-color: var(--l-color);
 }
 
 .carrossel figure {
   
   width: 100%;
-  height: 50%;
+  height: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1593,8 +1657,8 @@ footer p{
 
   width: 160px;
   height: 160px;
+  margin-top: 40px;
   border: 2px solid var(--important-color);
-  margin-top: 30px;
   background-color: var(--background-secondary);
   border-radius: 50%;
 }
@@ -1605,6 +1669,16 @@ footer p{
   background-position: center;
 }
 
+.img-people-max{
+  
+  
+  background-size: cover;
+}
+
+.imgsecondarypeople{
+  background-size:100%;
+}
+
 .img-ana{background-image: url(..//img/fotospeoples/ana.jpeg);}
 .img-andrei{background-image: url(..//img/fotospeoples/andrei.jpeg);}
 .img-arthur{background-image: url(..//img/fotospeoples/arthur.jpeg);}
@@ -1613,14 +1687,11 @@ footer p{
 .img-kaull{background-image: url(..//img/fotospeoples/kaull.jpg);}
 .img-ster{background-image: url(..//img/fotospeoples/ster.jpeg);}
 
-.carrossel figure:hover {
-  cursor: pointer;
-}
 
 .carrossel figcaption {
 
   width: 100%;
-  height: 50%;
+  height: 40%;
   margin-top: 2px;
   display: flex;
   align-items: center;
@@ -1632,17 +1703,14 @@ footer p{
 
 .carrossel li figcaption h1{
 
-  font-size: 1.5rem;
-  position: absolute;
-  top: 220px;
+  font-size: 1.7rem;
 }
 
 .carrossel li figcaption h4{
-
-  font-size: 1rem;
-  position: absolute;
+  
+  font-size: 1.2rem;
   color: var(--important-color);
-  top: 260px;
+  margin: 10px 0px;
 }
 
 .carrossel li figcaption p{
@@ -1650,7 +1718,6 @@ footer p{
   width: 80%;
   opacity: .5;
   font-weight: 600;
-  position: absolute;
   top: 290px;
   line-height: 23px;
   text-align: center;
@@ -1669,7 +1736,7 @@ footer p{
 
   height: 100%;
   width: 4.5%;
-  background-color: #000;
+  background-color: var(--important-color);
   box-shadow: 0px 0px 20px 0px #000;
   cursor: pointer;
   border: none;
@@ -1681,6 +1748,193 @@ footer p{
   transition: .5s;
   background-color: var(--important-color);
 }
+
+/******* MODAL PEOPLES *******/
+.mondalProfiles{
+  position: fixed;
+  top: 0;
+  left: 0px;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  margin-top: 0px;
+  background-color: #000000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  animation: modalProfiles .5s;
+}
+
+@keyframes modalProfiles {
+  0%{
+    opacity: 0;
+  }
+
+  from{
+    
+  }
+}
+
+.mondalProfiles section{
+  height: 80%;
+  margin-top: 60px;
+  width: 85%;
+  border-radius: 10px;
+  background-color: var(--background-principal);
+  display: flex;
+
+}
+
+.mondalProfiles section figure{
+  width: 50%;
+  height: 100%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mondalProfiles section figure div{
+
+  width: 90%;
+  height: 90%;
+  background-size: cover;
+  background-color: #000;
+  border: 2px solid var(--important-color);
+  border-radius: 10px;
+}
+
+.mondalProfiles section figcaption{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mondalProfiles section figcaption h1{
+
+  font-weight: 900;
+  font-size: 1.8rem;
+  margin-top: 40px;
+  text-align: left;
+  color: var(--important-color);
+  text-transform: uppercase;
+}
+
+
+.buttonCloseModalPeoples{
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  top: 70px;
+  right: 0px;
+  cursor: pointer;
+  border-bottom-left-radius: 50px;
+  border: none;
+}
+
+.buttonCloseModalPeoples:hover{
+  background-color: var(--important-color);
+  transition: .5s;
+}
+
+.buttonCloseModalPeoples:hover i{
+  
+  color: var(--background-l-principal);
+  transition: .5s;
+}
+
+.buttonCloseModalPeoples i{
+  color: var(--important-color);
+  font-size: 3rem;
+  margin-left: 5px;
+}
+
+.mondalProfiles section figcaption hr{
+
+  width: 60%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  opacity: .5;
+  background-color: var(--background-l-principal);
+  height: 1px;
+  border: none;
+}
+
+.mondalProfiles section figcaption h4{
+
+  font-size: 1.3rem;
+  font-weight: 200;
+  margin-top: 10px;
+}
+
+.mondalProfiles section figcaption h3{
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--important-color);
+}
+
+.conteudosPeoples{
+
+  width: 80%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contatosPeoples{
+
+  width: 80%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contatosPeoples div{
+
+  display: flex;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.contatosPeoples i{
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: var(--background-l-secondary);
+  color: var(--background-principal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.contatosPeoples i:hover{
+  transition: .3s;
+  color: var(--background-l-principal);
+  background-color: var(--important-color);
+  box-shadow: 0px 0px 10px 0px var(--important-color);
+}
+
+.conteudosPeoples a{
+  color: var(--background-l-secondary);
+  opacity: .8;
+}
+
+.mondalProfiles section figcaption h1,
+.mondalProfiles section figcaption hr,
+.mondalProfiles section figcaption h4,
+.conteudosPeoples,
+.contatosPeoples,
+.mondalProfiles section figcaption h2,
+.mondalProfiles section figcaption p{
+
+  margin-left: 50px;
+}
+
 
 /******* FEEDBACKS ********/
 
@@ -1694,8 +1948,8 @@ footer p{
 .box-feedback{
 
   width: 85.5%;
-  height: 50%;
-  margin-top: 70px;
+  height: 60%;
+  margin-top: 50px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -1705,34 +1959,37 @@ footer p{
 .box-feedback section{
 
   width: 100%;
-  height: 60%;
+  height: 77%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 
 }
 
 .box-feedback section div{
 
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
-
   flex-direction: column;
   justify-content: space-between;
   
 }
 
+#namesForm{
+  display: flex;
+  flex-direction: row;
+}
 
 .box-feedback div input{
 
-  width: 90%;
-  height: 80px;
+  width: 45.6%;
+  height: 70px;
   outline: none;
   background-color: var(--background-principal);
-  border-radius: 5px;
+  border-radius: 3px;
   border: none;
-  margin: inset 10px;
   font-size: 1rem;
   font-weight: 600;
   border: 1px solid #00000000;
@@ -1760,16 +2017,16 @@ footer p{
 
 .box-feedback section div textarea{
 
-  width: 93%;
-  height: 303px;
   padding: 20px;
+  height: 200px;
   outline: none;
-  border-radius: 5px;
+  background-color: var(--background-principal);
+  border-radius: 3px;
+  border: none;
   font-size: 1rem;
   font-weight: 600;
-  resize: none;
-  background-color: var(--background-principal);
   border: 1px solid #00000000;
+  resize: none;
 }
 
 /******* RESPONSIVIDADE ********/
@@ -2110,6 +2367,7 @@ footer p{
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+
   }
 
   footer h1,
