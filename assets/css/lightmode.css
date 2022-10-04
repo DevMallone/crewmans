@@ -1,0 +1,501 @@
+/******** COLORS *********/
+
+:root{
+
+  --light-background-principal:  #ced8e1;
+  --light-background-secondary: #e4e4e4;
+  --light-colortext-important:  #5d58f1;
+  --light-colortext-principal: #151515;
+  --light-colortext-secondart: #0e1c2970;
+}
+
+::-webkit-scrollbar{
+
+  width: 7px;
+  margin-top: 10px;
+}
+
+.light-mode::-webkit-scrollbar-track{
+
+  background-color: #363636;
+}
+
+.light-mode::-webkit-scrollbar-thumb{
+
+  background-color:  var(--light-colortext-important);
+}
+
+/******** LIGHT MODE *********/
+
+.light-mode{
+
+  background-color:  var(--light-background-secondary);
+  transition: .3s;
+}
+
+/******** MENU LIGHT *********/
+.light-mode .menu-scroll{
+  background-color: var(--light-colortext-principal);
+  position: fixed;
+}
+
+.light-mode .menu h1{
+  color: var(--light-background-secondary);
+}
+
+.light-mode .menu h1:hover{
+  color: var(--light-colortext-important);
+}
+
+.light-mode .menu ul hr{
+  background-color: var(--light-colortext-important);
+}
+
+.light-mode .menu ul a{
+  color: var(--light-background-secondary);
+}
+
+.light-mode .menu ul a:hover{
+  color: var(--light-colortext-important);
+}
+
+.light-mode .configurations i{
+  background-color: var(--light-colortext-important);
+  box-shadow: 0px 0px 10px 0px var(--light-colortext-important);
+}
+
+.light-mode .configurations i:hover{
+  color: var(--light-background-principal);
+}
+
+.light-mode .content-config li p{
+  color: var(--light-background-secondary);
+}
+
+.light-mode .content-config li h3{
+  color:var(--light-background-principal);
+}
+.light-mode .content-config li:hover h3,
+.light-mode .content-config li:hover i{
+  color: var(--light-background-secondary);
+}
+
+
+
+.light-mode .content-config li:hover{
+  background-color: var(--light-colortext-important);
+}
+
+.light-mode .content-config i:hover{
+  background-color: var(--light-colortext-important);
+}
+
+.light-mode .content-config i:hover{
+  box-shadow: 0px 0px 10px 0px var(--light-colortext-important);
+  color: var(--light-background-secondary);
+}
+
+/******** MODALS *********/
+
+.light-mode .modal{
+  animation: alguma .3s;
+  background-color: var(--light-colortext-important);
+}
+
+.light-mode .box-modal::-webkit-scrollbar-thumb{
+
+  background-color:  var(--light-colortext-important);
+}
+
+.light-mode .box-modal{
+  background-color: var(--light-background-principal);
+}
+
+.light-mode .box-modal h1,
+.light-mode .box-modal h3,
+.light-mode .box-modal h5{
+  color: var(--light-colortext-important);
+}
+
+@keyframes alguma{
+
+  0%{
+    opacity: 0;
+  }
+
+  from{
+    
+  }
+}
+
+@keyframes boxmodal{
+
+  0%{
+    top: 100%;
+  }
+  
+  from{
+    top: -300%;
+    
+  }
+}
+
+.light-mode .btn-close-modal{
+  
+  background: var(--light-background-principal);
+  font-size: 2.7rem;
+  transition: .3s;
+}
+
+.light-mode .btn-close-modal:hover{
+  background-color: var(--light-colortext-principal);
+}
+
+.light-mode .btn-close-modal i{
+  color: var(--light-colortext-important);
+  margin-left: 6px;
+}
+
+/**** TOPICOS *****/
+
+.light-mode .carrossel-categ a{
+
+  background-color: var(--light-colortext-principal);
+  border: 1px solid var(--light-colortext-principal);
+}
+
+.light-mode .carrossel-categ a:hover{
+
+  background-color: var(--light-colortext-important);
+}
+
+.light-mode .carrossel-categ a:hover h1,
+.light-mode .carrossel-categ a:hover h5{
+
+  color: var(--light-background-secondary);
+}
+
+.light-mode .carrossel-categ h1{
+  color: var(--light-colortext-important);
+}
+
+.light-mode .box-modal h1,
+.light-mode .box-modal h3{
+  font-weight: 700;
+}
+
+.light-mode .box-modal p{
+
+  color: var(--background-secondary);
+  font-weight: 700;
+}
+
+
+.light-mode .content-categs a figcaption{
+
+  background-color: var(--light-colortext-important); 
+}
+
+.light-mode .content-categs a:hover{
+  
+  background-color: red;
+}
+
+.light-mode .content-categs a:hover figcaption h6{
+  
+  color: var(--background-l-principal);
+}
+
+.light-mode .content-categs a figcaption h1{
+  color: var(--background-l-principal);
+}
+
+/**** FEEDBACKS *****/
+
+.light-mode .box-feedback input,
+.light-mode .box-feedback textarea{
+  background-color: var(--light-colortext-principal);
+}
+
+/**** TITLES *****/
+
+.light-mode .all-titles h2{
+  color: var(--light-colortext-important);
+  font-weight: 900;
+}
+
+.light-mode .all-titles p{
+  color: var(--light-colortext-principal);
+  font-weight: 700;
+}
+
+
+/**** BENNER INITIAL *****/
+
+.light-mode #home{
+  background-image: url(https://cdn.dribbble.com/users/976727/screenshots/3751186/rocket_animation_08.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.light-mode .banner{
+  background: #00000099;
+}
+
+.light-mode .changeName{
+  display: none;
+}
+
+.light-mode .logoPirata{
+  display: none;
+}
+
+.light-mode .astroLogo{
+  display: flex;
+  width: 80px;
+  margin-left: -10px;
+}
+
+.light-mode .otherName {
+  display: flex;
+}
+
+.light-mode .banner h1{
+
+  text-shadow: 2px 2px 5px #000;
+  color: var(--light-colortext-important);
+}
+
+.light-mode footer{
+  background-image: url(..//img/backgrounds/footerRocket.png);
+}
+
+.light-mode .banner a:hover{
+
+  background-color: var(--light-colortext-important);
+}
+
+/**** PAINELS *****/
+
+.light-mode #topics,
+.light-mode #aboutus,
+.light-mode #feedback,
+.light-mode #embreve,
+.light-mode #sobrenos,
+.light-mode #provas{
+
+  background-color: var(--light-background-secondary);
+}
+
+.light-mode .conteudos{
+
+  background-color:var(--light-background-principal);
+}
+
+.light-mode .box-war-paraguai figcaption p{
+
+  font-weight: 800;
+  color: var(--background-secondary);
+}
+
+.light-mode .box-war-paraguai figure{
+
+  box-shadow: 0px 0px 0px 0px #000;
+  border: 2px solid #000;
+}
+
+.light-mode .box-war-paraguai figcaption h1{
+
+  color:var(--light-colortext-important);
+}
+
+/**** BTN ALL *****/
+
+.light-mode .btn-all{
+  border: var(--light-colortext-important) 2px solid;
+  color: var(--light-colortext-important);
+}
+
+.light-mode .btn-all:hover{
+  box-shadow: 0px 100px 0px 0px inset var(--light-colortext-important);
+  color: var(--light-background-secondary);
+}
+.light-mode .banner .btn-all{
+  color: var(--light-background-secondary);
+}
+
+.light-mode .btn-close-modal{
+
+  background: var(--light-background-secondary);
+}
+
+/**** NOSSA EQUIPE *****/
+.light-mode .nossaEquipe figure{
+  border-radius: 10px;
+}
+
+.light-mode .nossaEquipe figcaption h1{
+  color: var(--light-colortext-important);
+}
+
+.light-mode .nossaEquipe figcaption h4{
+  color: var(--light-colortext-principal);
+}
+
+.light-mode .nossaEquipe figcaption p{
+  color: var(--light-colortext-principal);
+  font-weight: 700;
+}
+
+.light-mode .aboutPirate{
+  display: none;
+}
+
+.light-mode .aboutAstro{
+  display: flex;
+}
+
+
+/**** NOSSO TIME *****/
+
+.light-mode .carrossel li{
+  background: var(--light-colortext-principal);
+  box-shadow: none;
+}
+
+.light-mode .carrossel li:hover figure div{
+  border: 2px solid var(--light-background-secondary);
+}
+
+.light-mode .carrossel li:hover{
+  background-color: var(--light-colortext-important);
+}
+
+.light-mode .carrossel li:hover h4{
+  color: var(--light-background-principal);
+}
+
+.light-mode .carrossel li:hover p{
+  color: var(--light-colortext-principal);
+  opacity: 1;
+}
+
+.light-mode .carrossel li p{
+
+  color: var(--background-l-principal);
+}
+
+.light-mode .carrossel li figure div{
+  border: 2px solid var(--light-colortext-important);
+}
+
+.light-mode .carrossel li figcaption h4{
+  color: var(--light-colortext-important);
+}
+
+
+.light-mode .buttons-arrows button{
+
+  background-color: var(--light-colortext-important);
+}
+
+.light-mode .mondalProfiles{
+  background-color: var(--light-colortext-important);
+}
+
+.light-mode .mondalProfiles section{
+
+  background-color: var(--light-background-secondary);
+}
+
+.light-mode .mondalProfiles section figcaption h1,
+.light-mode .mondalProfiles section figcaption h3{
+  color: var(--light-colortext-important);
+}
+
+.light-mode .mondalProfiles section figcaption h4{
+  color: var(--light-colortext-principal);
+  font-weight: 700;
+}
+
+.light-mode .mondalProfiles section figcaption a{
+
+  color: var(--light-colortext-principal);
+  font-weight: 700;
+}
+
+.light-mode .mondalProfiles section figure div{
+  border: 2px solid var(--light-colortext-important);
+}
+
+.light-mode .contatosPeoples div i{
+  background-color: var(--light-colortext-principal);
+  color: var(--light-background-secondary);
+}
+
+.light-mode .contatosPeoples div i:hover{
+  background-color: var(--light-colortext-important);
+  box-shadow: 0px 0px 10px 0px var(--light-colortext-important);
+}
+
+.light-mode .buttonCloseModalPeoples i{
+  color: var(--light-colortext-important);
+}
+
+.light-mode .buttonCloseModalPeoples:hover{
+  background-color: var(--light-colortext-principal);
+}
+
+/**** PROVAS *****/
+
+.light-mode .provas{
+  background-color: var(--light-colortext-principal);
+}
+
+.light-mode .carrossel-provas a{
+  border: 2px solid var(--light-colortext-important);
+}
+
+.light-mode .carrossel-provas a figcaption{
+  background-color: #5d58f1;
+}
+
+.light-mode .carrossel-provas a figcaption h1{
+  color: var(--light-background-secondary);
+}
+
+.light-mode .provas h1{
+  color: var(--light-colortext-important);
+}
+
+.light-mode .custom-shape-divider-bottom-1664593381 .shape-fill {
+  fill: var(--light-background-secondary);
+}
+
+
+.light-mode footer figcaption a:hover{
+  background-color: var(--light-colortext-important);
+  box-shadow: 0px 0px 10px 0px var(--light-colortext-important);
+}
+
+.light-mode footer h1:hover{
+  color: var(--light-colortext-important);
+  transition: .3s;
+  cursor: pointer;
+}
+
+@media all and (max-width: 1024px) {
+  .light-mode .menu{
+    background-color: var(--light-colortext-principal);
+  }
+
+  .light-mode .menu button i{
+    color: var(--light-colortext-important);
+  }
+
+  .light-mode #menuEvent {
+
+    background-color: var(--light-colortext-important);
+  }
+}
