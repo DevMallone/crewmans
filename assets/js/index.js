@@ -9,23 +9,25 @@ window.addEventListener("scroll", function () {
 /************* MENU RESPONSIVE **************/
 
 let menu = document.getElementById('menuEvent')
+const menucolor = document.getElementById("changeMenu")
 
 function abrirMenu(){
 
   var fecharMenu = document.getElementById('fecharBtn')
   var abrirMenu = document.getElementById('abrirBtn')
-
   menu.style.display = "flex"
   fecharMenu.style.display = "flex"
   abrirMenu.style.display = "none"
 
+  modal.style.display = 'none';
+  btnConfigOpen.style.display = 'flex';
+  btnConfigClose.style.display = 'none'
 }
 
 function fecharMenu(){
 
   var fecharMenu = document.getElementById('fecharBtn')
   var abrirMenu = document.getElementById('abrirBtn')
-
   menu.style.display = "none"
   abrirMenu.style.display = "flex"
   fecharMenu.style.display = "none"
@@ -61,15 +63,49 @@ $('.carrossel-categ').slick({
   slidesToScroll: 1,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1025,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 2,
         infinite: true,
       }
     },
     {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
       breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+// CARROSSEL PEOPLES WORK
+$('.carrossel').slick({
+  autoplay: true,
+  arrows: false,
+  autoplaySpeed: 3000,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 800,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1
@@ -85,21 +121,20 @@ $('.carrossel-categ').slick({
   ]
 });
 
-// CARROSSEL PEOPLES WORK
-$('.carrossel').slick({
-  prevArrow: '.slick-prev-one',
-  nextArrow: '.slick-next-one',
+// CARROSSEL PROVAS
+$('.carrossel-provas').slick({
+arrows:false,
   autoplay: true,
   autoplaySpeed: 3000,
   infinite: true,
   speed: 300,
-  slidesToShow: 3,
+  slidesToShow: 4,
   slidesToScroll: 1,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1025,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 3,
         slidesToScroll: 2,
         infinite: true,
       }
@@ -112,7 +147,14 @@ $('.carrossel').slick({
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 500,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1
@@ -169,6 +211,12 @@ function openConfig(){
   modal.style.display = 'block';
   btnConfigOpen.style.display = 'none';
   btnConfigClose.style.display = 'flex'
+
+  var fecharMenu = document.getElementById('fecharBtn')
+  var abrirMenu = document.getElementById('abrirBtn')
+  menu.style.display = "none"
+  abrirMenu.style.display = "flex"
+  fecharMenu.style.display = "none"
 }
 
 function fecha(){
