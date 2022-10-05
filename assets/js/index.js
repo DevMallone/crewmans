@@ -53,8 +53,8 @@ function openTopics(){
 
 // CARROSSEL CATEGGORIES
 $('.carrossel-categ').slick({
-  prevArrow: '.slick-prev-categ',
-  nextArrow: '.slick-next-categ',
+  prevArrow: '.slick-prev-two',
+  nextArrow: '.slick-next-two',
   autoplay: true,
   autoplaySpeed: 3000,
   infinite: true,
@@ -89,8 +89,9 @@ $('.carrossel-categ').slick({
 
 // CARROSSEL PEOPLES WORK
 $('.carrossel').slick({
+  prevArrow: '.slick-prev-one',
+  nextArrow: '.slick-next-one',
   autoplay: true,
-  arrows: false,
   autoplaySpeed: 3000,
   infinite: true,
   speed: 300,
@@ -170,6 +171,11 @@ const contentOli = document.getElementById('contentOli')
 const contentIrep = document.getElementById('contentIrep')
 const contentDesi = document.getElementById('contentDesi')
 const content1War = document.getElementById('content1War')
+const contentBig = document.getElementById('contentBig')
+const contentParaguai = document.getElementById('contentparaguai')
+const contentRep = document.getElementById('contentRep')
+const contentRVacina = document.getElementById('contentRVacina')
+const contentEspada = document.getElementById('contentEspada')
 
 const closedAll = document.getElementsByClassName('btn-close-modal')
 
@@ -189,12 +195,36 @@ function openModal1War(){
   content1War.style.display = "flex"
 }
 
+function openModalBigwar(){
+  contentBig.style.display = "flex"
+}
+
+function openModalParaguai(){
+  contentParaguai.style.display = "flex"
+}
+
+function openModalRep(){
+  contentRep.style.display = "flex"
+}
+
+function openModalVacina(){
+  contentRVacina.style.display = "flex"
+}
+
+function openModalEspada(){
+  contentEspada.style.display = "flex"
+}
+
 function fecharmodal(){
   
   contentOli.style.display = "none"
   contentIrep.style.display = "none"
   contentDesi.style.display = "none"
   content1War.style.display = "none"
+  contentBig.style.display = "none"
+  contentRep.style.display = "none"
+  contentRVacina.style.display = "none"
+  contentEspada.style.display = "none"
 }
 
 
