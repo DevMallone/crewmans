@@ -485,6 +485,10 @@
   cursor: pointer;
 }
 
+.light-mode .arrast{
+  color: var(--light-colortext-important);
+}
+
 @media all and (max-width: 1024px) {
   .light-mode .menu{
     background-color: var(--light-colortext-principal);
