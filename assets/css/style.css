@@ -870,7 +870,7 @@ body{
   flex-direction: column;
 }
 
-.nossaEquipe figure img{
+.nossaEquipe figure div{
 
   width: 100%;
   height: 100%;
@@ -880,10 +880,16 @@ body{
 
 .aboutPirate{
   display: flex;
+  background-image: url(..//img/logo/EquipeCrewmansBanner.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .aboutAstro{
   display: none;
+  background-image: url(..//img/logo/EquipeCrewmansAstroBanner.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .nossaEquipe figcaption h1{
@@ -2008,6 +2014,10 @@ footer h1:hover{
     margin-bottom: 11px;
   }
 
+  .titleTime{
+    margin-top: -30px;
+  }
+
   /****** HOME *******/
 
   .banner{
@@ -2318,6 +2328,18 @@ footer h1:hover{
 /* Estilo para resolução menor que 425 pixels */
 @media all and (max-width: 425px) {
 
+  
+.custom-shape-divider-bottom-1664593381 {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  display: none;
+}
+
   /********** MENU **************/
 
   .menu h1{
@@ -2325,7 +2347,7 @@ footer h1:hover{
     margin-left: 25px;
     font-size: 1.2rem;
   }
-
+  
   .all-titles h2{
 
     margin: 0px;
@@ -2335,16 +2357,23 @@ footer h1:hover{
     font-size: .5rem;
   }
 
+  .configurations i{
+
+    position: relative;
+    left: 70px;
+  }
+
   /********** HOME **************/
 
   .banner h1{
-    font-size: 4rem;
+    font-size: 3.4rem;
   }
 
   .banner p{
     width: 85%;
     font-size: 1rem;
   }
+
 
   /******* SOBRE A EQUIPE *******/
   #sobrenos{
@@ -2548,5 +2577,101 @@ footer h1:hover{
     text-align: center;
   }
 
+  /********** MODALS **************/
+
+  .mondalProfiles{
+    height: 100vh;
+  }
+
+  .mondalProfiles section{
+
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mondalProfiles section figure{
+    width: 95%;
+    height: 60%;
+    margin-top: 100px;
+  }
+
+  .mondalProfiles section figcaption{
+    width: 85%;
+    height: 50%;
+    background-color: red;
+  }
+
+  .mondalProfiles section figcaption h1{
+
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
+  .mondalProfiles section figcaption h1,
+  .mondalProfiles section figcaption h4,
+  .conteudosPeoples, .contatosPeoples{
+
+    margin: 0px;
+  }
+
+  .conteudosPeoples a{
+
+    font-size: .7rem;
+  }
+
 }
 
+/* Estilo para resolução menor que 425 pixels */
+@media all and (max-width: 375px) {
+
+  /********** MENU **************/
+
+
+  .configurations i{
+
+    margin-left: -20px;
+  }
+
+  /********** MENU **************/
+
+  .menu h1{
+
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+  .all-titles h2{
+
+    margin: 0px;
+  }
+
+  .otherName{
+    font-size: .5rem;
+  }
+
+  .configurations i{
+
+    position: relative;
+    left: 70px;
+  }
+
+
+  /********** HOME **************/
+
+  .banner h1{
+    font-size: 3rem;
+  }
+
+  .banner p{
+    width: 85%;
+    font-size: 1rem;
+  }
+
+
+}
