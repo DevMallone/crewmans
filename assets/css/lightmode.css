@@ -233,7 +233,7 @@
 /**** BENNER INITIAL *****/
 
 .light-mode #home{
-  background-image: url(https://cdn.dribbble.com/users/976727/screenshots/3751186/rocket_animation_08.gif);
+  background-image: url(..//img/backgrounds/rocket.gif);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
