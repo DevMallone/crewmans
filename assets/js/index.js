@@ -224,6 +224,7 @@ function fecharmodal(){
   contentBig.style.display = "none"
   contentRep.style.display = "none"
   contentRVacina.style.display = "none"
+  contentParaguai.style.display = "none"
   contentEspada.style.display = "none"
 }
 
