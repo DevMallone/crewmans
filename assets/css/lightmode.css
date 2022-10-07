@@ -233,7 +233,7 @@
 /**** BENNER INITIAL *****/
 
 .light-mode #home{
-  background-image: url(..//img/backgrounds/rocket.gif);
+  background-image: url(https://cdn.dribbble.com/users/976727/screenshots/3751186/rocket_animation_08.gif);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -311,6 +311,13 @@
 }
 
 /**** BTN ALL *****/
+
+.light-mode .buttons-arrows button,
+.light-mode .buttons-arrows-two button{
+
+  background-color: var(--light-colortext-important);
+  box-shadow: 0px 0px 10px 0px #00000060;
+}
 
 .light-mode .btn-all{
   border: var(--light-colortext-important) 2px solid;
@@ -487,6 +494,19 @@
 
 .light-mode .arrast{
   color: var(--light-colortext-important);
+}
+
+/**** FEEDBACKS *****/
+
+
+.light-mode .namesForm input::placeholder,
+.light-mode .mensageForm textarea::placeholder{
+  color: #8b87f0;
+}
+
+.light-mode .namesForm input:focus,
+.light-mode .mensageForm textarea:focus{
+  outline: 1px solid var(--light-colortext-important);
 }
 
 @media all and (max-width: 1024px) {
