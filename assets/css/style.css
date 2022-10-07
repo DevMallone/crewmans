@@ -15,7 +15,7 @@
 /********** ROOT *************/
 
 :root{
-  --background-principal: #151515;
+  --background-principal: #252525;
   --background-secondary:  #050505;
   --important-color:  #ff7900;
   --background-white: #f4f4f4;
@@ -723,9 +723,9 @@ body{
 
   width: 85%;
   height: 55vh;
+  position: relative;
   margin-top: 50px;
 }
-
 
 .carrossel-categ{
 
@@ -1336,9 +1336,24 @@ footer h1:hover{
   position: relative;
 }
 
-.box-products:hover .buttons-arrows {
+.box-products:hover .buttons-arrows,
+.box-products-categ:hover .buttons-arrows-two{
+
   display: flex;
   transition: .5s;
+  animation: hoverArrows 1s;
+  
+}
+
+#moveNowButtonsCategs:hover .buttons-arrows-two{
+  display: flex;
+  animation: hoverArrows 1s;
+}
+
+@keyframes hoverArrows {
+  0%{
+    opacity: 0;
+  }
 }
 
 .box-products:hover #btn-carr{
@@ -1443,6 +1458,9 @@ footer h1:hover{
 /** JÚLIA IMG **/
 .img-julia{background-image: url(..//img/fotospeoples/julia.jpeg);}
 .img-julia2{background-image: url(..//img/fotospeoples/julia2.jpg);}
+/** JÚLIO IMG **/
+.img-julio{background-image: url(..//img/fotospeoples/julio2.jpg);}
+.img-julio2{background-image: url(..//img/fotospeoples/julio2.jpg);}
 /** KAULL IMG **/
 .img-kaull{background-image: url(..//img/fotospeoples/kaull.jpg);}
 .img-kaull2{background-image: url(..//img/fotospeoples/kaull2.jpeg);}
@@ -1483,7 +1501,15 @@ footer h1:hover{
   text-align: center;
 }
 
-.buttons-arrows{
+.buttons-arrows-two{
+
+  position: relative;
+  top: 40%;
+  left: -22px;
+  height: 30%;
+}
+
+.buttons-arrows, .buttons-arrows-two{
 
   width: 104%;
   height: 20%;
@@ -1492,9 +1518,10 @@ footer h1:hover{
   justify-content: space-between;
 }
 
-.buttons-arrows button{
+.buttons-arrows button,
+.buttons-arrows-two button{
 
-  height: 100%;
+  height: 100px;
   width: 50px;
   background-color: var(--important-color);
   box-shadow: 0px 0px 20px 0px #000;
@@ -1504,9 +1531,22 @@ footer h1:hover{
   font-size: 2rem;
 }
 
-.buttons-arrows button:hover{
+.buttons-arrows button:hover,
+.buttons-arrows-two button:hover{
   transition: .5s;
+  background-color: #fff;
+}
+
+.buttons-arrows button:hover i,
+.buttons-arrows-two button:hover i{
+  color: var(--background-secondary);
+}
+
+.buttons-arrows button:active,
+.buttons-arrows-two button:active{
+  
   background-color: var(--important-color);
+  animation-duration: 1s;
 }
 
 /******* MODAL PEOPLES *******/
@@ -1789,6 +1829,12 @@ footer h1:hover{
 }
 
 
+#titleTeam{
+
+  margin-top: 60px;
+}
+
+
 /******* RESPONSIVIDADE ********/
 
 
@@ -1960,6 +2006,7 @@ footer h1:hover{
   }
 
   /******* NOSSO TIME *******/
+
 
   .carrossel li{
     margin: 10px;
@@ -2379,7 +2426,7 @@ footer h1:hover{
   /******* SOBRE A EQUIPE *******/
   #sobrenos{
 
-    height: 800px;
+    height: 900px;
   }
 
   .nossaEquipe{
@@ -2389,7 +2436,6 @@ footer h1:hover{
     margin-top: 100px;
     display: flex;
     flex-direction: column;
-
   }
 
   .nossaEquipe h4{
@@ -2440,6 +2486,30 @@ footer h1:hover{
   .conteudos{
     height: 870px;
     align-items: center;
+  }
+
+  .conteudosMobile .box-war-paraguai{
+
+    margin-bottom: 150px;
+  }
+
+  .conteudosBigwar{
+
+    background-color: var(--background-l-secondary);
+  }
+
+  .conteudosBigwar{
+    height: 850px;
+    background-color: var(--background-white);
+  }
+
+  .conteudosBigwar .mobile-war{
+
+    margin-top: -100px;
+  }
+
+  .pannels .pannelVelho{
+    margin-top: -100px;
   }
   
   .box-war-paraguai{
