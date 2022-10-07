@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="assets/css/lightmode.css">
   <!----- EXPORT FONT AWESOME ------>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://unpkg.com/feather-icons"></script>
   <!----- FAVICON ------>
   <link rel="shortcut icon" href="assets/img/logo/chapeupirata.png" type="image/x-icon">
   <!----- LINK JIVOCHAT ------>
@@ -132,7 +131,7 @@
     <h2>NAVEGUE POR TÓPICOS</h2>
   </div>
 
-  <article class="box-products-categ">
+  <article id="moveNowButtonsCategs" class="box-products-categ">
     <section class="carrossel-categ">
 
       <a href="#warParaguai">
@@ -222,7 +221,7 @@
           <h1>República Velha</h1>
           <p>
             A República Velha ou primeira república é a primeira fase da república brasileira e entendeu-se
-de 1889 a 1930.
+            de 1889 a 1930.
           </p>
           <h5>Clique para ver</h5>
         </figcaption>
@@ -241,9 +240,18 @@ de 1889 a 1930.
           <h5>Clique para ver</h5>
         </figcaption>
       </a>
-     
-
+       
     </section>
+    
+    <div id="btn-carr" class="buttons-arrows-two">
+      <button class="slick-prev-two">
+        <i class="fa-solid fa-angle-left"></i>
+      </button>
+
+      <button class="slick-next-two">
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
+    </div>
 
 
   </article>
@@ -422,7 +430,7 @@ de 1889 a 1930.
 <!----- NOSSO TIME ------>
 <section class="pannels" id="aboutus">
 
-  <div class="all-titles titleTime">
+  <div id="titleTeam" class="all-titles titleTime">
       <h2>Nossa Tripulação</h2>
   </div>
 
@@ -502,6 +510,19 @@ de 1889 a 1930.
         </figure>
         <figcaption>
           <h1>Júlia dos Santos</h1>
+          <h4>Searcher & Idealistic</h4>
+          <p>
+            Clique para mais detalhes
+          </p>
+        </figcaption>
+      </li>
+      <!-- JÚLIO -->
+      <li>
+        <figure>
+          <div class="img-people img-julio">
+        </figure>
+        <figcaption>
+          <h1>Júlio Burio</h1>
           <h4>Searcher & Idealistic</h4>
           <p>
             Clique para mais detalhes
@@ -944,16 +965,18 @@ de 1889 a 1930.
     </p>
   </div>
 
-  <form class="formulario">
+  <form action="https://api.staticforms.xyz/submit" method="post" class="formulario">
     
     <section>
       <div class="namesForm">
-        <input type="text" name="" id="" placeholder="Nome">
-        <input type="text" name="" id="" placeholder="E-mail">
+        <input type="text" name="name" id="" placeholder="Nome" required>
+        <input type="text" name="email" id="" placeholder="E-mail" required>
       </div>
       <div class="mensageForm">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem"></textarea>
+        <textarea name="message" id="" cols="30" rows="10" required placeholder="Mensagem"></textarea>
       </div>
+      <input type="hidden" name="accessKey" value="db7b93c9-aba2-48bd-9c93-cec8ab215f4a">
+      <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/thanks.html">
     </section>
 
     <button class="btn-all" type="submit">Enviar</button>
